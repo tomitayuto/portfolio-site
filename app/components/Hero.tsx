@@ -39,7 +39,7 @@ export default function Hero() {
                   {s.label}
                 </dt>
                 <dd className="mt-3 flex items-baseline gap-1.5 whitespace-nowrap leading-none">
-                  <span className="font-display text-[26px] font-bold tracking-tight text-foreground sm:text-[32px] md:text-[44px]">
+                  <span className="font-display text-[26px] font-bold tracking-tight text-foreground underline decoration-accent decoration-[3px] underline-offset-[6px] sm:text-[32px] sm:decoration-[3px] sm:underline-offset-[7px] md:text-[44px] md:decoration-[4px] md:underline-offset-[10px]">
                     {s.value}
                   </span>
                   {s.note && (
