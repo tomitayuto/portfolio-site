@@ -22,11 +22,11 @@ export default function Hero() {
           </h1>
 
           {/* 名前（屋号とセット・大きく） */}
-          <div className="mt-6">
+          <div className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1">
             <p className="font-display text-2xl font-bold tracking-tight text-foreground md:text-3xl">
               富田 悠斗
             </p>
-            <p className="mt-1 font-display text-[11px] tracking-[0.22em] text-subtle md:text-xs">
+            <p className="font-display text-[11px] tracking-[0.22em] text-subtle md:text-xs">
               YUTO TOMITA
             </p>
           </div>
