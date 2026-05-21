@@ -28,10 +28,10 @@ export const credentials = [
 
 // 数値ハイライト（Hero下に並べる）
 export const stats = [
-  { value: "6年目", label: "WEBマーケ歴" },
-  { value: "20社+", label: "支援実績" },
-  { value: "1億円+", label: "累計広告運用額" },
-  { value: "4社", label: "現在伴走中（うち1社CMO）" },
+  { value: "6年目", label: "WEBマーケ歴", note: null as string | null },
+  { value: "20社以上", label: "支援実績", note: null as string | null },
+  { value: "1億円以上", label: "累計広告運用額", note: null as string | null },
+  { value: "4社", label: "現在の担当", note: "うち1社でCMO" },
 ];
 
 // 対応業務カテゴリ（7カテゴリ）
