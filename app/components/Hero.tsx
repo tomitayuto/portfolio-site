@@ -1,5 +1,5 @@
-import { ArrowRight, MapPin } from "lucide-react";
-import { site, stats } from "../data/site";
+import { ArrowRight } from "lucide-react";
+import { stats } from "../data/site";
 
 export default function Hero() {
   return (
@@ -60,24 +60,20 @@ export default function Hero() {
             ))}
           </dl>
 
-          {/* CTA + 拠点 */}
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          {/* CTA */}
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 font-display text-sm font-medium text-background transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-foreground px-4 py-4 font-display text-base font-semibold text-background transition-transform hover:-translate-y-0.5 sm:px-9 md:px-10 md:py-5 md:text-lg"
             >
-              お問い合わせ <ArrowRight size={16} strokeWidth={2} />
+              お問い合わせ <ArrowRight size={18} strokeWidth={2} />
             </a>
             <a
               href="#works"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-6 py-3 font-display text-sm font-medium text-foreground transition-colors hover:border-foreground"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-foreground bg-surface px-4 py-4 font-display text-base font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background sm:px-9 md:px-10 md:py-5 md:text-lg"
             >
               実績を見る
             </a>
-            <span className="inline-flex items-center gap-1.5 text-xs text-subtle">
-              <MapPin size={14} strokeWidth={1.8} />
-              {site.base}・愛知県内 直接訪問可
-            </span>
           </div>
         </div>
       </div>
