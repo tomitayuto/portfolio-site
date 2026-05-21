@@ -18,7 +18,7 @@ export default function Profile() {
       <div className="container-wide">
         <p className="eyebrow">Skills</p>
         <h2 className="font-display mt-6 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-          持っているスキル
+          スキル
         </h2>
         <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted md:text-base">
           戦略立案・ディレクション・コンサルから、広告運用・SNS運用・LP作成・CRM構築といった実務まで、Webマーケティングに関する業務を一貫して対応可能です。
