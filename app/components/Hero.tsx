@@ -42,7 +42,7 @@ export default function Hero() {
                   {s.value}
                 </dd>
                 {s.note && (
-                  <p className="mt-2 font-display whitespace-nowrap text-[11px] text-muted md:text-[13px]">
+                  <p className="mt-2 font-display whitespace-nowrap text-[13px] font-semibold text-accent sm:text-[16px] md:text-[22px]">
                     {s.note}
                   </p>
                 )}
