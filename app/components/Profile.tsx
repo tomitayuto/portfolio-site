@@ -3,12 +3,12 @@ const skills = [
   "SNS運用",
   "CRM構築（Lステップ / エルメ）",
   "LP作成・LPO",
-  "ECサイトページ作成",
+  "ECサイトページ構築",
   "ディレクション",
   "プロダクトマネジメント",
-  "マーケ顧問",
-  "マーケ講師",
-  "マーケコンサル",
+  "マーケティング顧問",
+  "マーケティング講師",
+  "マーケティングコンサル",
   "DXコンサル",
 ];
 
@@ -16,9 +16,9 @@ export default function Profile() {
   return (
     <section id="profile" className="section-pad border-t border-border bg-surface">
       <div className="container-wide">
-        <p className="eyebrow">Capabilities</p>
+        <p className="eyebrow">Skills</p>
         <h2 className="font-display mt-6 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-          対応可能なスキル
+          持っているスキル
         </h2>
         <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted md:text-base">
           戦略立案・ディレクション・コンサルから、広告運用・SNS運用・LP作成・CRM構築といった実務まで、Webマーケティングに関する業務を一貫して対応可能です。

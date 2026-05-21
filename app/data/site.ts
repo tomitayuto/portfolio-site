@@ -31,7 +31,7 @@ export const stats = [
   { value: "６年目", label: "WEBマーケ歴", note: null as string | null },
   { value: "２０社以上", label: "支援実績", note: null as string | null },
   { value: "１億円以上", label: "累計広告運用額", note: null as string | null },
-  { value: "４社", label: "現在の担当", note: "うち１社でCMO" },
+  { value: "４社", label: "現在対応中の案件", note: "うち１社でCMO" },
 ];
 
 // 対応業務カテゴリ（7カテゴリ）
