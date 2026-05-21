@@ -11,10 +11,10 @@ export default function Hero() {
           {/* 名前（屋号サイズで大きく） */}
           <h1 className="font-display mt-5 whitespace-nowrap leading-[1.1] tracking-tight text-foreground md:mt-6">
             <span className="relative inline-flex flex-wrap items-baseline gap-x-3 gap-y-1">
-              <span className="text-[clamp(1.625rem,6.3vw,3.75rem)] font-bold">
+              <span className="text-[clamp(2.25rem,9vw,5rem)] font-bold">
                 富田 悠斗
               </span>
-              <span className="font-display text-[clamp(0.75rem,2vw,1.125rem)] tracking-[0.18em] text-subtle">
+              <span className="font-display text-[clamp(0.875rem,2.2vw,1.375rem)] tracking-[0.18em] text-subtle">
                 YUTO TOMITA
               </span>
               <span
