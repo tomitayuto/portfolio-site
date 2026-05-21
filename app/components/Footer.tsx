@@ -19,7 +19,7 @@ export default function Footer() {
             Navigate
           </p>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><a href="#profile" className="hover:text-accent">Profile</a></li>
+            <li><a href="#skills" className="hover:text-accent">Skills</a></li>
             <li><a href="#services" className="hover:text-accent">Services</a></li>
             <li><a href="#works" className="hover:text-accent">Works</a></li>
             <li><a href="#career" className="hover:text-accent">Career</a></li>

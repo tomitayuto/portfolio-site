@@ -14,7 +14,7 @@ const skills = [
 
 export default function Profile() {
   return (
-    <section id="profile" className="section-pad border-t border-border bg-surface">
+    <section id="skills" className="section-pad border-t border-border bg-surface">
       <div className="container-wide">
         <p className="eyebrow">Skills</p>
         <h2 className="font-display mt-6 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
