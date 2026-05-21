@@ -14,7 +14,7 @@ export default function Hero() {
               <span className="text-[clamp(2.25rem,9vw,5rem)] font-bold">
                 富田 悠斗
               </span>
-              <span className="font-display text-[clamp(0.875rem,2.2vw,1.375rem)] tracking-[0.18em] text-subtle">
+              <span className="font-display text-[clamp(1.5rem,6vw,3.3rem)] font-semibold tracking-[0.08em] text-accent">
                 YUTO TOMITA
               </span>
               <span
