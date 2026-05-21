@@ -82,3 +82,49 @@ body {
 .hairline {
   border-color: var(--border);
 }
+
+/* Hero value underline — draws from left on mount */
+.hero-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: hero-underline-draw 0.9s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  animation-delay: var(--hero-underline-delay, 0s);
+}
+
+@media (min-width: 640px) {
+  .hero-underline::after {
+    bottom: -7px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-underline::after {
+    height: 4px;
+    bottom: -10px;
+  }
+}
+
+@keyframes hero-underline-draw {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-underline::after {
+    animation: none;
+    transform: scaleX(1);
+  }
+}

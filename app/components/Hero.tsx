@@ -33,13 +33,20 @@ export default function Hero() {
 
           {/* 肩書き4枚（社会的証明） */}
           <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border lg:grid-cols-4">
-            {stats.map((s) => (
+            {stats.map((s, i) => (
               <div key={s.label} className="bg-surface px-3 py-6 sm:px-6 md:px-7 md:py-8">
                 <dt className="font-display whitespace-nowrap text-[16px] font-medium tracking-[0.01em] text-foreground sm:text-[17px] md:text-lg">
                   {s.label}
                 </dt>
                 <dd className="mt-3 flex items-baseline gap-1.5 whitespace-nowrap leading-none">
-                  <span className="font-display text-[26px] font-bold tracking-tight text-foreground underline decoration-accent decoration-[3px] underline-offset-[6px] sm:text-[32px] sm:decoration-[3px] sm:underline-offset-[7px] md:text-[44px] md:decoration-[4px] md:underline-offset-[10px]">
+                  <span
+                    className="hero-underline font-display text-[26px] font-bold tracking-tight text-foreground sm:text-[32px] md:text-[44px]"
+                    style={
+                      {
+                        "--hero-underline-delay": `${0.25 + i * 0.18}s`,
+                      } as React.CSSProperties
+                    }
+                  >
                     {s.value}
                   </span>
                   {s.note && (
