@@ -34,13 +34,16 @@ export default function Hero() {
           {/* 肩書き4枚（社会的証明） */}
           <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border lg:grid-cols-4">
             {stats.map((s, i) => (
-              <div key={s.label} className="bg-surface px-3 py-6 sm:px-6 md:px-7 md:py-8">
-                <dt className="font-display whitespace-nowrap text-[16px] font-medium tracking-[0.01em] text-foreground sm:text-[17px] md:text-lg">
+              <div
+                key={s.label}
+                className="bg-surface px-3 py-6 sm:px-7 sm:py-7 md:px-9 md:py-9"
+              >
+                <dt className="font-display whitespace-nowrap text-[15px] font-medium tracking-[0.01em] text-foreground sm:text-[17px] md:text-lg">
                   {s.label}
                 </dt>
-                <dd className="mt-3 flex flex-col items-baseline gap-2.5 leading-none sm:flex-row sm:items-baseline sm:gap-2">
+                <dd className="mt-3 flex items-baseline gap-1.5 whitespace-nowrap leading-none">
                   <span
-                    className="hero-underline whitespace-nowrap font-display text-[26px] font-bold tracking-tight text-foreground sm:text-[32px] md:text-[44px]"
+                    className="hero-underline font-display text-[22px] font-bold tracking-tight text-foreground sm:text-[32px] md:text-[44px]"
                     style={
                       {
                         "--hero-underline-delay": `${0.25 + i * 0.18}s`,
@@ -50,7 +53,7 @@ export default function Hero() {
                     {s.value}
                   </span>
                   {s.note && (
-                    <span className="whitespace-nowrap font-display text-[14px] font-semibold text-accent sm:text-[16px] md:text-[20px]">
+                    <span className="font-display text-[12px] font-semibold text-accent sm:text-[16px] md:text-[20px]">
                       {s.note}
                     </span>
                   )}
