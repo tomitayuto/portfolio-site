@@ -38,14 +38,16 @@ export default function Hero() {
                 <dt className="font-display whitespace-nowrap text-[16px] font-medium tracking-[0.01em] text-foreground sm:text-[17px] md:text-lg">
                   {s.label}
                 </dt>
-                <dd className="mt-3 font-display whitespace-nowrap text-[26px] font-bold leading-none tracking-tight text-foreground sm:text-[32px] md:text-[44px]">
-                  {s.value}
+                <dd className="mt-3 flex items-baseline gap-1.5 whitespace-nowrap leading-none">
+                  <span className="font-display text-[26px] font-bold tracking-tight text-foreground sm:text-[32px] md:text-[44px]">
+                    {s.value}
+                  </span>
+                  {s.note && (
+                    <span className="font-display text-[11px] font-semibold text-accent sm:text-[14px] md:text-[18px]">
+                      {s.note}
+                    </span>
+                  )}
                 </dd>
-                {s.note && (
-                  <p className="mt-2 font-display whitespace-nowrap text-[13px] font-semibold text-accent sm:text-[16px] md:text-[22px]">
-                    {s.note}
-                  </p>
-                )}
               </div>
             ))}
           </dl>
