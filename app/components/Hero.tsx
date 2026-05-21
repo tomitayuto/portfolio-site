@@ -34,15 +34,15 @@ export default function Hero() {
           {/* 肩書き4枚（社会的証明） */}
           <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border lg:grid-cols-4">
             {stats.map((s) => (
-              <div key={s.label} className="bg-surface px-4 py-5 md:px-6 md:py-6">
-                <dt className="font-display text-[10px] uppercase tracking-[0.18em] text-subtle md:text-[11px] md:tracking-[0.2em]">
+              <div key={s.label} className="bg-surface px-5 py-6 md:px-7 md:py-7">
+                <dt className="font-display text-xs font-medium tracking-[0.08em] text-muted md:text-sm">
                   {s.label}
                 </dt>
-                <dd className="mt-2 font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl md:text-3xl">
+                <dd className="mt-2.5 font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
                   {s.value}
                 </dd>
                 {s.note && (
-                  <p className="mt-1 font-display text-[10px] text-muted md:text-xs">
+                  <p className="mt-1.5 font-display text-[11px] text-muted md:text-xs">
                     {s.note}
                   </p>
                 )}
