@@ -3,13 +3,13 @@ import { site, stats } from "../data/site";
 
 export default function Hero() {
   return (
-    <section className="section-pad relative overflow-hidden">
+    <section className="relative overflow-hidden pt-8 pb-[clamp(80px,12vw,160px)] md:pt-16">
       <div className="container-wide">
         <div className="max-w-5xl">
           <p className="eyebrow">Portfolio — 2026</p>
 
           {/* 屋号（改行なし・1行で収める） */}
-          <h1 className="font-display mt-6 whitespace-nowrap text-[clamp(1.875rem,7.6vw,4.75rem)] font-bold leading-[1.1] tracking-tight text-foreground">
+          <h1 className="font-display mt-5 whitespace-nowrap text-[clamp(1.875rem,7.6vw,4.75rem)] font-bold leading-[1.1] tracking-tight text-foreground md:mt-6">
             <span className="relative inline-block">
               WEBマーケの超
               <span className="text-accent">☆</span>
@@ -21,16 +21,18 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* 名前（屋号とセット） */}
-          <p className="mt-5 font-display text-base text-foreground md:text-lg">
-            <span className="font-semibold">富田 悠斗</span>
-            <span className="ml-3 text-xs tracking-[0.16em] text-subtle md:text-sm">
+          {/* 名前（屋号とセット・大きく） */}
+          <div className="mt-6">
+            <p className="font-display text-2xl font-bold tracking-tight text-foreground md:text-3xl">
+              富田 悠斗
+            </p>
+            <p className="mt-1 font-display text-[11px] tracking-[0.22em] text-subtle md:text-xs">
               YUTO TOMITA
-            </span>
-          </p>
+            </p>
+          </div>
 
           {/* 肩書き4枚（社会的証明） */}
-          <dl className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border lg:grid-cols-4">
+          <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border lg:grid-cols-4">
             {stats.map((s) => (
               <div key={s.label} className="bg-surface px-4 py-5 md:px-6 md:py-6">
                 <dt className="font-display text-[10px] uppercase tracking-[0.18em] text-subtle md:text-[11px] md:tracking-[0.2em]">
