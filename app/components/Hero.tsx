@@ -43,13 +43,13 @@ export default function Hero() {
             </span>
           </div>
 
-          <dl className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border lg:grid-cols-4">
             {stats.map((s) => (
-              <div key={s.label} className="bg-surface px-6 py-6">
-                <dt className="font-display text-[11px] uppercase tracking-[0.2em] text-subtle">
+              <div key={s.label} className="bg-surface px-4 py-5 md:px-6 md:py-6">
+                <dt className="font-display text-[10px] uppercase tracking-[0.18em] text-subtle md:text-[11px] md:tracking-[0.2em]">
                   {s.label}
                 </dt>
-                <dd className="mt-2 font-display text-2xl font-bold tracking-tight text-foreground md:text-3xl">
+                <dd className="mt-2 font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl md:text-3xl">
                   {s.value}
                 </dd>
               </div>
