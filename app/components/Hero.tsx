@@ -38,9 +38,9 @@ export default function Hero() {
                 <dt className="font-display whitespace-nowrap text-[16px] font-medium tracking-[0.01em] text-foreground sm:text-[17px] md:text-lg">
                   {s.label}
                 </dt>
-                <dd className="mt-3 flex items-baseline gap-1.5 whitespace-nowrap leading-none">
+                <dd className="mt-3 flex flex-col items-baseline gap-2.5 leading-none sm:flex-row sm:items-baseline sm:gap-2">
                   <span
-                    className="hero-underline font-display text-[26px] font-bold tracking-tight text-foreground sm:text-[32px] md:text-[44px]"
+                    className="hero-underline whitespace-nowrap font-display text-[26px] font-bold tracking-tight text-foreground sm:text-[32px] md:text-[44px]"
                     style={
                       {
                         "--hero-underline-delay": `${0.25 + i * 0.18}s`,
@@ -50,7 +50,7 @@ export default function Hero() {
                     {s.value}
                   </span>
                   {s.note && (
-                    <span className="font-display text-[11px] font-semibold text-accent sm:text-[14px] md:text-[18px]">
+                    <span className="whitespace-nowrap font-display text-[14px] font-semibold text-accent sm:text-[16px] md:text-[20px]">
                       {s.note}
                     </span>
                   )}
