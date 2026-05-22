@@ -70,7 +70,9 @@ export default function Profile() {
                       <p className="font-display text-base font-semibold tracking-tight text-foreground md:text-lg">
                         {s.title}
                       </p>
-                      <p className="mt-0.5 text-xs text-muted md:text-sm">{s.short}</p>
+                      {s.short && (
+                        <p className="mt-0.5 text-xs text-muted md:text-sm">{s.short}</p>
+                      )}
                     </div>
                     <ChevronDown
                       size={20}
@@ -87,7 +89,7 @@ export default function Profile() {
                   >
                     <div className="overflow-hidden">
                       <div className="border-t border-border bg-surface px-6 py-6 md:px-8">
-                        <p className="text-sm leading-relaxed text-foreground">
+                        <p className="whitespace-pre-line text-sm leading-relaxed text-foreground">
                           {s.description}
                         </p>
                         {"media" in s && Array.isArray((s as { media?: readonly string[] }).media) && (
@@ -106,7 +108,7 @@ export default function Profile() {
                           </>
                         )}
                         <p className="mt-5 font-display text-[11px] uppercase tracking-[0.18em] text-subtle">
-                          代表的な案件
+                          実績の代表例
                         </p>
                         <ul className="mt-3 space-y-1.5 text-sm text-muted">
                           {s.cases.map((c) => (
