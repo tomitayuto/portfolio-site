@@ -49,8 +49,8 @@ export default function Profile() {
         </h2>
         <p className="mt-6 max-w-3xl whitespace-pre-line text-sm leading-relaxed text-muted md:text-base">
           {`事業のゴールやプロダクトから逆算し、3C分析・ファネル設計・顧客導線やCRMの見直しなど、上流工程から根本的な課題を洗い出します。
-広告運用・SNS運用・LP作成・CRM構築といった実務に加え、ディレクション・コンサルティングまで、Webマーケティングに関する業務を一貫対応。理想とする状態に到達するまで伴走いたします。
-必要に応じて、セミナーや勉強会を通じた内製化支援にも踏み込みます。`}
+広告運用・SNS運用・LP作成・CRM構築といった実務に加え、ディレクション・コンサルティングまで、Webマーケティングに関する業務を一貫して対応し、理想とする状態に到達するまで伴走してまいります。
+必要に応じて、セミナーや勉強会を通じた内製化支援にもご協力いたします。`}
         </p>
 
         <div id="services" className="mt-10 scroll-mt-24">
