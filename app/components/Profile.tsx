@@ -110,14 +110,9 @@ export default function Profile() {
                         <p className="mt-5 font-display text-[11px] uppercase tracking-[0.18em] text-subtle">
                           経験のある業種
                         </p>
-                        <ul className="mt-3 space-y-1.5 text-sm text-muted">
-                          {s.cases.map((c) => (
-                            <li key={c} className="flex items-start gap-2">
-                              <span className="mt-1.5 inline-block h-1 w-1 flex-none rounded-full bg-accent" />
-                              <span>{c}</span>
-                            </li>
-                          ))}
-                        </ul>
+                        <p className="mt-3 text-sm leading-relaxed text-muted">
+                          {s.cases.join("／")}
+                        </p>
                       </div>
                     </div>
                   </div>
