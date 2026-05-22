@@ -115,6 +115,7 @@ export const serviceCategories = [
       "人材派遣",
       "恋愛",
       "結婚相談所",
+      "など",
     ],
   },
   {
