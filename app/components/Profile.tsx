@@ -43,7 +43,10 @@ export default function Profile() {
           ))}
         </ul>
 
-        <p className="mt-10 max-w-3xl text-sm leading-relaxed text-muted md:text-base">
+        <h2 className="font-display mt-16 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+          対応業務
+        </h2>
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted md:text-base">
           事業のゴールから逆算した上流工程の課題整理を起点に、必要な施策を必要な粒度で実装します。社内教育としてのセミナー・勉強会の登壇も実施しており、内製化を目指す体制づくりまで踏み込んで支援します。
         </p>
 
