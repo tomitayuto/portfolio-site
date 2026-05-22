@@ -43,7 +43,8 @@ export default function Profile() {
           ))}
         </ul>
 
-        <h2 className="font-display mt-16 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+        <p className="eyebrow mt-16">Services</p>
+        <h2 className="font-display mt-6 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
           対応業務
         </h2>
         <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted md:text-base">
