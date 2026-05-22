@@ -90,6 +90,21 @@ export default function Profile() {
                         <p className="text-sm leading-relaxed text-foreground">
                           {s.description}
                         </p>
+                        {"media" in s && Array.isArray((s as { media?: readonly string[] }).media) && (
+                          <>
+                            <p className="mt-5 font-display text-[11px] uppercase tracking-[0.18em] text-subtle">
+                              運用可能な媒体
+                            </p>
+                            <ul className="mt-3 space-y-1.5 text-sm text-muted">
+                              {(s as { media: readonly string[] }).media.map((m) => (
+                                <li key={m} className="flex items-start gap-2">
+                                  <span className="mt-1.5 inline-block h-1 w-1 flex-none rounded-full bg-accent" />
+                                  <span>{m}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        )}
                         <p className="mt-5 font-display text-[11px] uppercase tracking-[0.18em] text-subtle">
                           代表的な案件
                         </p>
