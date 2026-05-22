@@ -108,7 +108,7 @@ export default function Profile() {
                           </>
                         )}
                         <p className="mt-5 font-display text-[11px] uppercase tracking-[0.18em] text-subtle">
-                          実績の代表例
+                          経験のある業種
                         </p>
                         <ul className="mt-3 space-y-1.5 text-sm text-muted">
                           {s.cases.map((c) => (
