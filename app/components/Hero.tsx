@@ -66,7 +66,7 @@ export default function Hero() {
               href="#contact"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-foreground px-4 py-4 font-display text-base font-semibold text-background transition-transform hover:-translate-y-0.5 sm:px-9 md:px-10 md:py-5 md:text-lg"
             >
-              お問い合わせ <ArrowRight size={18} strokeWidth={2} />
+              お問合せ <ArrowRight size={18} strokeWidth={2} />
             </a>
             <a
               href="#works"

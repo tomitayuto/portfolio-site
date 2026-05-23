@@ -48,7 +48,7 @@ export default function Contact() {
           <div>
             <p className="eyebrow">Contact</p>
             <h2 className="font-display mt-6 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-              お問い合わせ・ご連絡
+              お問合せ・ご連絡
             </h2>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-muted md:text-base">
               「相談していいのか分からない」段階でも、まずは気軽にお声がけください。

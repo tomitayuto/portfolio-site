@@ -39,7 +39,7 @@ export default function Works() {
           </div>
           <p className="max-w-md text-sm leading-relaxed text-muted">
             業務範囲が広いので、見たいカテゴリで絞り込めます。<br />
-            一部の案件は守秘のためクライアント名を匿名で記載しています。詳細はお問い合わせください。
+            一部の案件は守秘のためクライアント名を匿名で記載しています。詳細はお問合せください。
           </p>
         </div>
 
