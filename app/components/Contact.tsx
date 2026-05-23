@@ -2,12 +2,13 @@ import { ArrowUpRight, CalendarClock, Mail, Phone } from "lucide-react";
 import { site } from "../data/site";
 
 // LINE公式ロゴ風アイコン（緑円＋白吹き出し＋LINEテキスト）
-const LineIcon = ({ size = 18 }: { size?: number; strokeWidth?: number }) => (
+// 親要素いっぱいに広がる仕様（円が枠そのものになる）
+const LineIcon = (_props: { size?: number; strokeWidth?: number }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 320 320"
-    width={size + 10}
-    height={size + 10}
+    width="100%"
+    height="100%"
     aria-hidden="true"
   >
     <circle cx="160" cy="160" r="160" fill="#06C755" />
@@ -28,36 +29,40 @@ const channels = [
     label: "ONLINE MEETING",
     value: "オンラインMTGを予約する",
     href: site.contact.meetingUrl,
-    note: "Jicooで希望の日時をその場で予約",
+    note: "打合せをご希望の方はこちら",
     primary: true,
     external: true,
+    customIcon: false,
   },
   {
     icon: LineIcon,
     label: "LINE",
     value: "LINEでお問合せ",
     href: site.contact.lineUrl,
-    note: "テンポよくやり取りしたい方向け",
+    note: "気軽に相談したい方はこちら",
     primary: false,
     external: true,
+    customIcon: true,
   },
   {
     icon: Phone,
     label: "PHONE",
     value: site.contact.phone,
     href: `tel:${site.contact.phone.replaceAll("-", "")}`,
-    note: "急ぎのご連絡はこちらへ",
+    note: "お急ぎの方はこちら",
     primary: false,
     external: false,
+    customIcon: false,
   },
   {
     icon: Mail,
     label: "EMAIL",
     value: site.contact.email,
     href: `mailto:${site.contact.email}`,
-    note: "ご相談・お見積もり依頼はこちら",
+    note: "メールをご希望の方はこちら",
     primary: false,
     external: false,
+    customIcon: false,
   },
 ];
 
@@ -84,7 +89,7 @@ export default function Contact() {
           </div>
 
           <ul className="divide-y divide-border overflow-hidden rounded-2xl border border-border bg-background">
-            {channels.map(({ icon: Icon, label, value, href, note, primary, external }) => (
+            {channels.map(({ icon: Icon, label, value, href, note, primary, external, customIcon }) => (
               <li key={label}>
                 <a
                   href={href}
@@ -95,10 +100,12 @@ export default function Contact() {
                   }`}
                 >
                   <span
-                    className={`flex h-11 w-11 flex-none items-center justify-center rounded-full border transition-colors ${
-                      primary
-                        ? "border-accent bg-accent text-background"
-                        : "border-border bg-background text-foreground group-hover:border-accent group-hover:text-accent"
+                    className={`flex h-11 w-11 flex-none items-center justify-center overflow-hidden rounded-full transition-colors ${
+                      customIcon
+                        ? ""
+                        : primary
+                          ? "border border-accent bg-accent text-background"
+                          : "border border-border bg-background text-foreground group-hover:border-accent group-hover:text-accent"
                     }`}
                   >
                     <Icon size={18} strokeWidth={1.8} />
