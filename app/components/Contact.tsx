@@ -48,12 +48,10 @@ export default function Contact() {
           <div>
             <p className="eyebrow">Contact</p>
             <h2 className="font-display mt-6 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-              お問合せ・ご連絡
+              お問合せ
             </h2>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-muted md:text-base">
-              「相談していいのか分からない」段階でも、まずは気軽にお声がけください。
-              <br />
-              事業フェーズや現状を伺った上で、最適な関わり方を一緒に考えます。
+              まずはお気軽にお問合せください。現在のご状況・目的・ご予算に応じて、最適なプランをご提案いたします。
             </p>
             <p className="mt-6 text-xs leading-relaxed text-subtle">
               ※ {site.contact.replyNote}
