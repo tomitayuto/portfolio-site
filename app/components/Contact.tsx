@@ -4,7 +4,7 @@ import { site } from "../data/site";
 const channels = [
   {
     icon: CalendarClock,
-    label: "オンラインMTGでお問合せ",
+    label: "ONLINE MEETING",
     value: "オンラインミーティングを予約する",
     href: site.contact.meetingUrl,
     note: "Jicooで希望の日時をその場で予約",
@@ -13,7 +13,7 @@ const channels = [
   },
   {
     icon: Mail,
-    label: "メールでお問合せ",
+    label: "EMAIL",
     value: site.contact.email,
     href: `mailto:${site.contact.email}`,
     note: "ご相談・お見積もり依頼はこちら",
@@ -22,7 +22,7 @@ const channels = [
   },
   {
     icon: Phone,
-    label: "お電話でお問合せ",
+    label: "PHONE",
     value: site.contact.phone,
     href: `tel:${site.contact.phone.replaceAll("-", "")}`,
     note: "急ぎのご連絡はこちらへ",
@@ -31,7 +31,7 @@ const channels = [
   },
   {
     icon: MessageCircle,
-    label: "LINEでお問合せ",
+    label: "LINE",
     value: "LINEで連絡する",
     href: site.contact.lineUrl,
     note: "テンポよくやり取りしたい方向け",
@@ -85,11 +85,6 @@ export default function Contact() {
                   <div className="flex-1">
                     <p className="font-display text-[11px] uppercase tracking-[0.2em] text-subtle">
                       {label}
-                      {primary && (
-                        <span className="ml-2 rounded-full bg-foreground px-2 py-0.5 text-[9px] tracking-wider text-background">
-                          RECOMMEND
-                        </span>
-                      )}
                     </p>
                     <p
                       className={`mt-1 text-sm font-medium ${
