@@ -51,9 +51,11 @@ export default function Contact() {
               お問合せ
             </h2>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-muted md:text-base">
-              まずはお気軽にお問合せください。現在のご状況・目的・ご予算に応じて、最適なプランをご提案いたします。
+              まずはお気軽にお問合せください。
+              <br />
+              現在のご状況・目的・ご予算に応じて、最適なプランをご提案いたします。
             </p>
-            <p className="mt-6 text-xs leading-relaxed text-subtle">
+            <p className="mt-3 text-xs leading-relaxed text-subtle">
               ※ {site.contact.replyNote}
               <br />
               ※ 内容によってはお請けできない場合があります。
