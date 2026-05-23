@@ -1,10 +1,9 @@
 import Link from "next/link";
 
 const nav = [
-  { href: "#skills", label: "Skills" },
-  { href: "#services", label: "Services" },
-  { href: "#works", label: "Works" },
-  { href: "#career", label: "Career" },
+  { href: "#skills", label: "スキル・対応業務" },
+  { href: "#works", label: "ポートフォリオ" },
+  { href: "#career", label: "経歴" },
 ];
 
 export default function Header() {
@@ -22,7 +21,7 @@ export default function Header() {
             href="#contact"
             className="font-display text-xs font-medium text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-colors hover:text-accent md:hidden"
           >
-            Contact
+            お問合せ
           </a>
         </div>
 
