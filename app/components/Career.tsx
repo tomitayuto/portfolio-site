@@ -28,7 +28,7 @@ export default function Career() {
               {c.role && (
                 <p className="mt-1 font-display text-xs text-subtle">{c.role}</p>
               )}
-              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">{c.body}</p>
+              <p className="mt-4 max-w-2xl whitespace-pre-line text-sm leading-relaxed text-muted">{c.body}</p>
               {i === 0 && (
                 <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-foreground px-3 py-1 font-display text-[10px] font-medium tracking-wider text-background">
                   現在
