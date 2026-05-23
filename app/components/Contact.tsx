@@ -114,11 +114,7 @@ export default function Contact() {
                     <p className="font-display text-[11px] uppercase tracking-[0.2em] text-subtle">
                       {label}
                     </p>
-                    <p
-                      className={`mt-1 text-sm font-medium ${
-                        primary ? "text-foreground" : "text-foreground"
-                      }`}
-                    >
+                    <p className="mt-1 text-base font-semibold text-foreground md:text-lg">
                       {value}
                     </p>
                     <p className="mt-0.5 text-xs text-muted">{note}</p>
