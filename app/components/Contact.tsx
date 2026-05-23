@@ -4,7 +4,7 @@ import { site } from "../data/site";
 const channels = [
   {
     icon: CalendarClock,
-    label: "Online Meeting",
+    label: "オンラインMTGでお問合せ",
     value: "オンラインミーティングを予約する",
     href: site.contact.meetingUrl,
     note: "Jicooで希望の日時をその場で予約",
@@ -13,7 +13,7 @@ const channels = [
   },
   {
     icon: Mail,
-    label: "Email",
+    label: "メールでお問合せ",
     value: site.contact.email,
     href: `mailto:${site.contact.email}`,
     note: "ご相談・お見積もり依頼はこちら",
@@ -22,7 +22,7 @@ const channels = [
   },
   {
     icon: Phone,
-    label: "Phone",
+    label: "お電話でお問合せ",
     value: site.contact.phone,
     href: `tel:${site.contact.phone.replaceAll("-", "")}`,
     note: "急ぎのご連絡はこちらへ",
@@ -31,7 +31,7 @@ const channels = [
   },
   {
     icon: MessageCircle,
-    label: "LINE",
+    label: "LINEでお問合せ",
     value: "LINEで連絡する",
     href: site.contact.lineUrl,
     note: "テンポよくやり取りしたい方向け",
