@@ -17,12 +17,12 @@ export default function Career() {
                 style={{ width: 14, height: 14 }}
                 aria-hidden
               />
-              <p className="font-display text-xs tracking-[0.18em] text-accent">{c.period}</p>
+              <p className="font-display text-sm tracking-[0.18em] text-accent md:text-base">{c.period}</p>
               <h3 className="mt-2 font-display text-lg font-semibold leading-snug tracking-tight text-foreground md:text-xl">
                 {c.title}
               </h3>
               {c.role && (
-                <p className="mt-1 font-display text-xs text-subtle">{c.role}</p>
+                <p className="mt-1 font-display text-sm text-subtle md:text-base">{c.role}</p>
               )}
               <p className="mt-4 max-w-2xl whitespace-pre-line text-sm leading-relaxed text-muted">{c.body}</p>
               {i === 0 && (
