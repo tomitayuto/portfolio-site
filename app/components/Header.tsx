@@ -41,7 +41,7 @@ export default function Header() {
           href="#contact"
           className="hidden font-display text-sm font-medium text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-colors hover:text-accent md:inline"
         >
-          Contact
+          お問合せ
         </a>
       </div>
     </header>
