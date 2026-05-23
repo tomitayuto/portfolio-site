@@ -8,10 +8,6 @@ export default function Career() {
         <h2 className="font-display mt-6 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
           経歴
         </h2>
-        <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted md:text-base">
-          単発の制作からSNS・広告運用代行を経て、現在は「事業に伴走する」スタイルへ。<br />
-          そのプロセスでつくられた業務範囲の広さが、いまの強みになっています。
-        </p>
 
         <ol className="mt-16 space-y-12 border-l border-border md:ml-4">
           {career.map((c, i) => (
