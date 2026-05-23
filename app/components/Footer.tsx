@@ -9,10 +9,6 @@ export default function Footer() {
             WEBマーケの超<span className="text-accent">☆</span>伴走屋
           </p>
           <p className="mt-3 text-sm text-background/70">{site.name}（{site.nameEn}）</p>
-          <p className="mt-4 max-w-sm text-sm leading-relaxed text-background/70">
-            戦略から運用まで、課題が解決するまで伴走するWEBマーケター。
-            事業フェーズに合わせて、必要な役割を必要な粒度で担います。
-          </p>
         </div>
         <div>
           <p className="font-display text-xs uppercase tracking-[0.22em] text-background/60">
