@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "WEBマーケの超☆伴走屋 | 富田 悠斗",
   description:
-    "戦略から運用まで、課題が解決するまで伴走するWEBマーケター・富田悠斗のポートフォリオ。広告運用累計1億円以上、支援実績20社以上。広告運用・SNS運用・LP作成・LPO・CRM構築・プロダクトマネジメントまで一気通貫で対応。",
+    "戦略から運用まで、課題が解決するまで伴走するWEBマーケター・富田悠斗のポートフォリオ。広告運用累計1億円以上、支援実績20社以上。広告運用・SNS運用・LP制作・LPO・CRM構築・プロダクトマネジメントまで一気通貫で対応。",
   openGraph: {
     title: "WEBマーケの超☆伴走屋 | 富田 悠斗",
     description:

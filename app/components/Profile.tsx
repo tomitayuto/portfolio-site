@@ -8,7 +8,7 @@ const skills = [
   "広告運用",
   "SNS運用",
   "CRM構築（Lステップ / エルメ）",
-  "LP作成・LPO",
+  "LP制作・LPO",
   "ECサイトページ構築",
   "ディレクション",
   "プロダクトマネジメント",
@@ -29,7 +29,7 @@ export default function Profile() {
           スキル
         </h2>
         <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted md:text-base">
-          戦略立案・ディレクション・コンサルから、広告運用・SNS運用・LP作成・CRM構築といった実務まで、Webマーケティングに関する業務を一貫して対応可能です。
+          戦略立案・ディレクション・コンサルから、広告運用・SNS運用・LP制作・CRM構築といった実務まで、WEBマーケティングに関する業務を一貫して対応可能です。
         </p>
 
         <ul className="mt-10 flex flex-wrap gap-2">
@@ -49,7 +49,7 @@ export default function Profile() {
         </h2>
         <p className="mt-6 max-w-3xl whitespace-pre-line text-sm leading-relaxed text-muted md:text-base">
           {`事業のゴールやプロダクトから逆算し、3C分析・ファネル設計・顧客導線やCRMの見直しなど、上流工程から根本的な課題を洗い出します。
-広告運用・SNS運用・LP作成・CRM構築といった実務に加え、ディレクション・コンサルティングまで、Webマーケティングに関する業務を一貫して対応し、理想とする状態に到達するまで伴走してまいります。
+広告運用・SNS運用・LP制作・CRM構築といった実務に加え、ディレクション・コンサルティングまで、WEBマーケティングに関する業務を一貫して対応し、理想とする状態に到達するまで伴走してまいります。
 必要に応じて、セミナーや勉強会を通じた内製化支援にもご協力いたします。`}
         </p>
 

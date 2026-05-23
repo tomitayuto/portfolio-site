@@ -10,7 +10,7 @@ export type WorkCategory =
 export const categoryLabels: Record<WorkCategory, string> = {
   pm: "プロダクトマネジメント",
   consulting: "コンサル・講師",
-  lp: "LP作成・LPO",
+  lp: "LP制作・LPO",
   crm: "CRM構築",
   ads: "広告運用",
   sns: "SNS運用",
@@ -120,7 +120,7 @@ export const works: Work[] = [
     industry: "薬局フランチャイズ",
     title: "薬局フランチャイズ加盟の集客",
     summary:
-      "「LPなし／導線曖昧」の状態から、LP作成・導線設計・Meta×Googleの二段運用までを土台ごと再構築。",
+      "「LPなし／導線曖昧」の状態から、LP制作・導線設計・Meta×Googleの二段運用までを土台ごと再構築。",
     metrics: ["問合せ数 0件 → 8件"],
     scope: ["LPO", "導線構築", "Meta広告", "Google広告"],
   },
@@ -140,19 +140,19 @@ export const works: Work[] = [
     industry: "看護師転職エージェント",
     title: "看護師転職エージェントのリスト獲得",
     summary:
-      "Web広告での集客テストとオプトイン獲得を目的に、Meta×Googleの二段運用を実施。",
+      "WEB広告での集客テストとオプトイン獲得を目的に、Meta×Googleの二段運用を実施。",
     metrics: ["20名以上のリスト獲得", "応募CPA 700円台"],
     scope: ["Meta広告", "Google広告"],
   },
 
-  // ---- LP作成・LPO ----
+  // ---- LP制作・LPO ----
   {
     id: "lp-major-staffing",
     category: "lp",
     industry: "大手人材",
-    title: "大手人材会社のLP作成",
+    title: "大手人材会社のLP制作",
     summary:
-      "大手人材会社のLP作成を担当。事業ターゲットを踏まえた設計・コピー・構成のディレクションを実施。",
+      "大手人材会社のLP制作を担当。事業ターゲットを踏まえた設計・コピー・構成のディレクションを実施。",
     scope: ["ヒアリング", "構成設計", "ディレクション"],
     recent: true,
     needsHearing: true,
@@ -361,7 +361,7 @@ export const works: Work[] = [
     industry: "金融商品（FXツール）",
     title: "アドアフィリエイト（直接提携）",
     summary:
-      "Meta広告とLPを組み合わせ、販売元との直接提携で運用。LP作成・Lステップ構築・販売導線設計までDRMの一連の流れを実体験。",
+      "Meta広告とLPを組み合わせ、販売元との直接提携で運用。LP制作・Lステップ構築・販売導線設計までDRMの一連の流れを実体験。",
     metrics: ["月商70万円達成", "LP CVR 15〜35%", "CPA 250〜500円"],
     scope: ["Meta広告", "LP", "Lステップ", "DRM"],
   },
