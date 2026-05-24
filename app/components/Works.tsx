@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Clock } from "lucide-react";
+import { ArrowUpRight, Clock } from "lucide-react";
 import { categoryLabels, works, type WorkCategory } from "../data/works";
 
 type Filter = "all" | "recent" | WorkCategory;
@@ -128,6 +128,18 @@ export default function Works() {
                     </li>
                   ))}
                 </ul>
+              )}
+
+              {w.url && (
+                <a
+                  href={w.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-1 self-start rounded-full border border-accent/40 bg-accent-soft px-3 py-1 font-display text-xs font-medium text-accent transition-colors hover:border-accent hover:bg-accent hover:text-background"
+                >
+                  公開中のLPを見る
+                  <ArrowUpRight size={12} strokeWidth={2} />
+                </a>
               )}
             </article>
           ))}

@@ -28,6 +28,7 @@ export type Work = {
   recent?: boolean; // 直近1年フラグ
   ongoing?: boolean; // 継続中フラグ
   needsHearing?: boolean; // 詳細ヒアリングが必要
+  url?: string; // 公開中LP・サービスのURL
 };
 
 export const works: Work[] = [
@@ -165,6 +166,7 @@ export const works: Work[] = [
     summary:
       "ヒアリング・競合分析・ワイヤーフレーム設計・構成設計・広告運用までを一貫して担当した火災保険LP案件。",
     scope: ["ヒアリング", "競合分析", "ワイヤー", "広告連動"],
+    url: "https://www.sala-fs.co.jp/salanokasaihoken/",
   },
   {
     id: "lp-apparel-staffing",
@@ -183,6 +185,7 @@ export const works: Work[] = [
     summary:
       "シニア層向け金融商材のLPを制作。商材理解と読み手の不安を踏まえた構成設計を実施。",
     scope: ["構成設計", "ディレクション"],
+    url: "https://www.sala-fs.co.jp/yutorian/",
   },
   {
     id: "lp-real-estate-buy",
@@ -201,6 +204,7 @@ export const works: Work[] = [
     summary:
       "金融商材のリースバックLP。複雑な仕組みを噛み砕いて訴求する構成設計を担当。",
     scope: ["構成設計"],
+    url: "https://andrenovation.sala.jp/leaseback_lp/",
   },
   {
     id: "lp-konkatsu-store",
@@ -210,6 +214,57 @@ export const works: Work[] = [
     summary:
       "結婚相談所の実店舗集客に向けたLP制作。エリア・ターゲット文脈を踏まえた設計。",
     scope: ["構成設計", "店舗集客"],
+    url: "https://all-syugo.hp.peraichi.com/lp1",
+  },
+
+  // ↓ 新規追加（ダミー：詳細はヒアリング後に修正）
+  {
+    id: "lp-willtec-engineer",
+    category: "lp",
+    industry: "新卒採用（人材）",
+    title: "ウイルテック × ガクシー エンジニアキャリアセミナーLP",
+    summary:
+      "ガクシー経由の委託案件。理系学生限定のエンジニアキャリアセミナーへの集客LPを担当。構成設計・コピー監修まで一貫対応。",
+    scope: ["構成設計", "コピー監修", "新卒採用LP"],
+    url: "https://campaign-link.studio.site/gaxi-willtec/careerseminar",
+    recent: true,
+    needsHearing: true,
+  },
+  {
+    id: "lp-baseme-gakushi",
+    category: "lp",
+    industry: "HRtech・新卒採用",
+    title: "BaseMe × ガクシー コラボキャンペーンLP",
+    summary:
+      "ガクシー経由の委託案件。HRtechサービス「BaseMe」とのコラボキャンペーンLP。プロフィール作成→特典訴求で会員登録を促進する構成。",
+    scope: ["構成設計", "キャンペーン設計", "コピー監修"],
+    url: "https://baseme.app/lp/gaxi202512",
+    recent: true,
+    needsHearing: true,
+  },
+  {
+    id: "lp-jkhd-internship",
+    category: "lp",
+    industry: "新卒採用（人材）",
+    title: "JKホールディングス 27卒インターンLP",
+    summary:
+      "ガクシー経由の委託案件。JKホールディングスの27卒向け体験型インターンの集客LP。学生視点での訴求設計を担当。",
+    scope: ["構成設計", "コピー監修", "新卒採用LP"],
+    url: "https://campaign-link.studio.site/jkhd/20251129",
+    recent: true,
+    needsHearing: true,
+  },
+  {
+    id: "lp-konkatsu-meta",
+    category: "lp",
+    industry: "結婚相談所（Meta広告用）",
+    title: "結婚相談所 Meta広告用LP",
+    summary:
+      "結婚相談所（クピード「全員集合」）案件のMeta広告流入用LP。マッチングアプリ運用ノウハウのリード獲得を目的とした構成設計を担当。",
+    scope: ["構成設計", "Meta広告連動", "リード獲得LP"],
+    url: "https://all-syugo.hp.peraichi.com/meta_lp1",
+    recent: true,
+    needsHearing: true,
   },
 
   // ---- プロダクトマネジメント ----
