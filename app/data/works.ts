@@ -92,7 +92,7 @@ export const works: Work[] = [
     summary:
       "応募〜採用までのCRMをLステップで構築しました。応募者の状態に合わせた自動化と、内部運用まで含めた設計を行っています。",
     metrics: ["採用数 20名以上UP", "応募数 120件以上UP"],
-    scope: ["Lステップ", "採用CRM", "自動化設計"],
+    scope: ["Lステップ", "採用CRM", "導線設計"],
   },
   {
     id: "crm-ats",
@@ -103,7 +103,7 @@ export const works: Work[] = [
     summary:
       "採用業務の生産性向上を目的に、ATS(採用管理)ツールの構築を担当しました。",
     metrics: ["業務生産性UP"],
-    scope: ["ATS", "業務効率化"],
+    scope: ["ATS", "業務効率化", "導線設計"],
   },
   {
     id: "pm-staffing",
