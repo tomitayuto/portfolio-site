@@ -2,7 +2,14 @@
 
 import { useMemo, useState } from "react";
 import { ArrowUpRight, Clock } from "lucide-react";
-import { categoryLabels, works, type WorkCategory } from "../data/works";
+import {
+  caseLabels,
+  caseOrder,
+  categoryLabels,
+  works,
+  type Work,
+  type WorkCategory,
+} from "../data/works";
 
 type Filter = "all" | "recent" | WorkCategory;
 
@@ -18,6 +25,73 @@ const filterButtons: { id: Filter; label: string }[] = [
   { id: "affiliate", label: categoryLabels.affiliate },
 ];
 
+function WorkCard({ w }: { w: Work }) {
+  return (
+    <article
+      className="group flex flex-col rounded-2xl border border-border bg-background p-6 transition-colors hover:border-foreground/30"
+    >
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="rounded-full bg-accent-soft px-2.5 py-0.5 font-display text-[10px] font-medium tracking-wider text-accent">
+          {categoryLabels[w.category]}
+        </span>
+        {w.recent && (
+          <span className="inline-flex items-center gap-1 rounded-full border border-accent/50 px-2.5 py-0.5 font-display text-[10px] font-medium text-accent">
+            <Clock size={10} strokeWidth={2} />
+            直近1年
+          </span>
+        )}
+      </div>
+
+      <p className="mt-4 font-display text-[11px] uppercase tracking-[0.16em] text-subtle">
+        {w.industry}
+      </p>
+      <h3 className="mt-1.5 font-display text-base font-semibold leading-snug tracking-tight text-foreground">
+        {w.title}
+      </h3>
+
+      {w.metrics && w.metrics.length > 0 && (
+        <ul className="mt-4 space-y-1 border-l-2 border-accent pl-3">
+          {w.metrics.map((m) => (
+            <li
+              key={m}
+              className="font-display text-sm font-semibold tracking-tight text-foreground"
+            >
+              {m}
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">{w.summary}</p>
+
+      {w.scope && w.scope.length > 0 && (
+        <ul className="mt-4 flex flex-wrap gap-1">
+          {w.scope.map((s) => (
+            <li
+              key={s}
+              className="rounded-full border border-border px-2.5 py-0.5 text-[10px] text-subtle"
+            >
+              {s}
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {w.url && (
+        <a
+          href={w.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex items-center gap-1 self-start rounded-full border border-accent/40 bg-accent-soft px-3 py-1 font-display text-xs font-medium text-accent transition-colors hover:border-accent hover:bg-accent hover:text-background"
+        >
+          公開中のLPを見る
+          <ArrowUpRight size={12} strokeWidth={2} />
+        </a>
+      )}
+    </article>
+  );
+}
+
 export default function Works() {
   const [filter, setFilter] = useState<Filter>("all");
 
@@ -25,6 +99,18 @@ export default function Works() {
     if (filter === "all") return works;
     if (filter === "recent") return works.filter((w) => w.recent);
     return works.filter((w) => w.category === filter);
+  }, [filter]);
+
+  // "all" 表示用：案件グループごとに分けて表示
+  const grouped = useMemo(() => {
+    if (filter !== "all") return null;
+    const caseGroups = caseOrder.map((cid) => ({
+      caseId: cid,
+      caseName: caseLabels[cid],
+      items: works.filter((w) => w.caseId === cid),
+    }));
+    const solo = works.filter((w) => !w.caseId);
+    return { caseGroups, solo };
   }, [filter]);
 
   return (
@@ -66,75 +152,52 @@ export default function Works() {
         </div>
 
         {/* 案件カード */}
-        <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((w) => (
-            <article
-              key={w.id}
-              className="group flex flex-col rounded-2xl border border-border bg-background p-6 transition-colors hover:border-foreground/30"
-            >
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="rounded-full bg-accent-soft px-2.5 py-0.5 font-display text-[10px] font-medium tracking-wider text-accent">
-                  {categoryLabels[w.category]}
-                </span>
-                {w.recent && (
-                  <span className="inline-flex items-center gap-1 rounded-full border border-accent/50 px-2.5 py-0.5 font-display text-[10px] font-medium text-accent">
-                    <Clock size={10} strokeWidth={2} />
-                    直近1年
+        {grouped ? (
+          <div className="mt-12 space-y-14">
+            {grouped.caseGroups.map((g) => (
+              <div key={g.caseId}>
+                <div className="mb-5 flex items-baseline gap-3 border-b border-border pb-3">
+                  <h3 className="font-display text-lg font-semibold tracking-tight text-foreground md:text-xl">
+                    {g.caseName}
+                  </h3>
+                  <span className="font-display text-xs text-subtle">
+                    {g.items.length}件
                   </span>
-                )}
+                </div>
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                  {g.items.map((w) => (
+                    <WorkCard key={w.id} w={w} />
+                  ))}
+                </div>
               </div>
-
-              <p className="mt-4 font-display text-[11px] uppercase tracking-[0.16em] text-subtle">
-                {w.industry}
-              </p>
-              <h3 className="mt-1.5 font-display text-base font-semibold leading-snug tracking-tight text-foreground">
-                {w.title}
-              </h3>
-
-              {w.metrics && w.metrics.length > 0 && (
-                <ul className="mt-4 space-y-1 border-l-2 border-accent pl-3">
-                  {w.metrics.map((m) => (
-                    <li
-                      key={m}
-                      className="font-display text-sm font-semibold tracking-tight text-foreground"
-                    >
-                      {m}
-                    </li>
+            ))}
+            {grouped.solo.length > 0 && (
+              <div>
+                <div className="mb-5 flex items-baseline gap-3 border-b border-border pb-3">
+                  <h3 className="font-display text-lg font-semibold tracking-tight text-foreground md:text-xl">
+                    その他の案件
+                  </h3>
+                  <span className="font-display text-xs text-subtle">
+                    {grouped.solo.length}件
+                  </span>
+                </div>
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                  {grouped.solo.map((w) => (
+                    <WorkCard key={w.id} w={w} />
                   ))}
-                </ul>
-              )}
+                </div>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {filtered.map((w) => (
+              <WorkCard key={w.id} w={w} />
+            ))}
+          </div>
+        )}
 
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">{w.summary}</p>
-
-              {w.scope && w.scope.length > 0 && (
-                <ul className="mt-4 flex flex-wrap gap-1">
-                  {w.scope.map((s) => (
-                    <li
-                      key={s}
-                      className="rounded-full border border-border px-2.5 py-0.5 text-[10px] text-subtle"
-                    >
-                      {s}
-                    </li>
-                  ))}
-                </ul>
-              )}
-
-              {w.url && (
-                <a
-                  href={w.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-1 self-start rounded-full border border-accent/40 bg-accent-soft px-3 py-1 font-display text-xs font-medium text-accent transition-colors hover:border-accent hover:bg-accent hover:text-background"
-                >
-                  公開中のLPを見る
-                  <ArrowUpRight size={12} strokeWidth={2} />
-                </a>
-              )}
-            </article>
-          ))}
-        </div>
-
-        {filtered.length === 0 && (
+        {filter !== "all" && filtered.length === 0 && (
           <p className="mt-10 rounded-xl border border-dashed border-border p-10 text-center text-sm text-subtle">
             該当する実績はありません。
           </p>
