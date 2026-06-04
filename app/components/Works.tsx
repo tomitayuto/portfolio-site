@@ -3,9 +3,9 @@
 import { useMemo, useState } from "react";
 import { ArrowUpRight, Clock } from "lucide-react";
 import {
-  caseLabels,
-  caseOrder,
   categoryLabels,
+  industryLabels,
+  industryOrder,
   works,
   type Work,
   type WorkCategory,
@@ -95,23 +95,23 @@ function WorkCard({ w }: { w: Work }) {
 export default function Works() {
   const [filter, setFilter] = useState<Filter>("all");
 
+  // フィルター適用後の作品リスト
   const filtered = useMemo(() => {
     if (filter === "all") return works;
     if (filter === "recent") return works.filter((w) => w.recent);
     return works.filter((w) => w.category === filter);
   }, [filter]);
 
-  // "all" 表示用：案件グループごとに分けて表示
+  // 業種ごとにグルーピング（業種順を保つ）
   const grouped = useMemo(() => {
-    if (filter !== "all") return null;
-    const caseGroups = caseOrder.map((cid) => ({
-      caseId: cid,
-      caseName: caseLabels[cid],
-      items: works.filter((w) => w.caseId === cid),
-    }));
-    const solo = works.filter((w) => !w.caseId);
-    return { caseGroups, solo };
-  }, [filter]);
+    return industryOrder
+      .map((ind) => ({
+        industry: ind,
+        label: industryLabels[ind],
+        items: filtered.filter((w) => w.industryCategory === ind),
+      }))
+      .filter((g) => g.items.length > 0);
+  }, [filtered]);
 
   return (
     <section id="portfolio" className="section-pad border-t border-border bg-surface">
@@ -127,6 +127,12 @@ export default function Works() {
         <div className="mt-10 flex flex-wrap gap-2">
           {filterButtons.map((b) => {
             const isActive = filter === b.id;
+            const count =
+              b.id === "all"
+                ? works.length
+                : b.id === "recent"
+                ? works.filter((w) => w.recent).length
+                : works.filter((w) => w.category === b.id).length;
             return (
               <button
                 key={b.id}
@@ -139,26 +145,20 @@ export default function Works() {
                 }`}
               >
                 {b.label}
-                <span className="ml-1.5 text-[10px] opacity-70">
-                  {b.id === "all"
-                    ? works.length
-                    : b.id === "recent"
-                    ? works.filter((w) => w.recent).length
-                    : works.filter((w) => w.category === b.id).length}
-                </span>
+                <span className="ml-1.5 text-[10px] opacity-70">{count}</span>
               </button>
             );
           })}
         </div>
 
-        {/* 案件カード */}
-        {grouped ? (
+        {/* 業種グルーピング表示 */}
+        {grouped.length > 0 ? (
           <div className="mt-12 space-y-14">
-            {grouped.caseGroups.map((g) => (
-              <div key={g.caseId}>
+            {grouped.map((g) => (
+              <div key={g.industry}>
                 <div className="mb-5 flex items-baseline gap-3 border-b border-border pb-3">
                   <h3 className="font-display text-lg font-semibold tracking-tight text-foreground md:text-xl">
-                    {g.caseName}
+                    {g.label}
                   </h3>
                   <span className="font-display text-xs text-subtle">
                     {g.items.length}件
@@ -171,33 +171,8 @@ export default function Works() {
                 </div>
               </div>
             ))}
-            {grouped.solo.length > 0 && (
-              <div>
-                <div className="mb-5 flex items-baseline gap-3 border-b border-border pb-3">
-                  <h3 className="font-display text-lg font-semibold tracking-tight text-foreground md:text-xl">
-                    その他の案件
-                  </h3>
-                  <span className="font-display text-xs text-subtle">
-                    {grouped.solo.length}件
-                  </span>
-                </div>
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                  {grouped.solo.map((w) => (
-                    <WorkCard key={w.id} w={w} />
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
         ) : (
-          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {filtered.map((w) => (
-              <WorkCard key={w.id} w={w} />
-            ))}
-          </div>
-        )}
-
-        {filter !== "all" && filtered.length === 0 && (
           <p className="mt-10 rounded-xl border border-dashed border-border p-10 text-center text-sm text-subtle">
             該当する実績はありません。
           </p>
