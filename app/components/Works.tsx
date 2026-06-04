@@ -30,17 +30,11 @@ export default function Works() {
   return (
     <section id="works" className="section-pad border-t border-border bg-surface">
       <div className="container-wide">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <p className="eyebrow">Works</p>
-            <h2 className="font-display mt-6 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-              ポートフォリオ
-            </h2>
-          </div>
-          <p className="max-w-md text-sm leading-relaxed text-muted">
-            業務範囲が広いので、見たいカテゴリで絞り込めます。<br />
-            一部の案件は守秘のためクライアント名を匿名で記載しています。詳細はお問合せください。
-          </p>
+        <div>
+          <p className="eyebrow">Works</p>
+          <h2 className="font-display mt-6 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+            ポートフォリオ
+          </h2>
         </div>
 
         {/* フィルター */}
@@ -86,11 +80,6 @@ export default function Works() {
                   <span className="inline-flex items-center gap-1 rounded-full border border-accent/50 px-2.5 py-0.5 font-display text-[10px] font-medium text-accent">
                     <Clock size={10} strokeWidth={2} />
                     直近1年
-                  </span>
-                )}
-                {w.ongoing && (
-                  <span className="rounded-full bg-foreground px-2.5 py-0.5 font-display text-[10px] font-medium text-background">
-                    継続中
                   </span>
                 )}
               </div>
