@@ -69,7 +69,7 @@ export default function Hero() {
               お問合せ <ArrowRight size={18} strokeWidth={2} />
             </a>
             <a
-              href="#works"
+              href="#portfolio"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-foreground bg-surface px-4 py-4 font-display text-base font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background sm:px-9 md:px-10 md:py-5 md:text-lg"
             >
               実績を見る

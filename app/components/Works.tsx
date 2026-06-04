@@ -114,10 +114,10 @@ export default function Works() {
   }, [filter]);
 
   return (
-    <section id="works" className="section-pad border-t border-border bg-surface">
+    <section id="portfolio" className="section-pad border-t border-border bg-surface">
       <div className="container-wide">
         <div>
-          <p className="eyebrow">Works</p>
+          <p className="eyebrow">Portfolio</p>
           <h2 className="font-display mt-6 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
             ポートフォリオ
           </h2>

@@ -16,7 +16,7 @@ export default function Footer() {
           </p>
           <ul className="mt-4 space-y-2 text-sm">
             <li><a href="#skills" className="hover:text-accent">スキル・対応業務</a></li>
-            <li><a href="#works" className="hover:text-accent">ポートフォリオ</a></li>
+            <li><a href="#portfolio" className="hover:text-accent">ポートフォリオ</a></li>
             <li><a href="#career" className="hover:text-accent">経歴</a></li>
             <li><a href="#contact" className="hover:text-accent">お問合せ</a></li>
           </ul>

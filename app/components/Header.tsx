@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const nav = [
   { href: "#skills", label: "スキル・対応業務" },
-  { href: "#works", label: "ポートフォリオ" },
+  { href: "#portfolio", label: "ポートフォリオ" },
   { href: "#career", label: "経歴" },
 ];
 
