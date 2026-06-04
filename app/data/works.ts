@@ -22,6 +22,7 @@ export type IndustryCategory =
   | "finance"
   | "housing"
   | "education"
+  | "career"
   | "love"
   | "parenting"
   | "other";
@@ -47,6 +48,7 @@ export const industryLabels: Record<IndustryCategory, string> = {
   finance: "金融・保険",
   housing: "住宅・不動産",
   education: "教育・スクール",
+  career: "キャリア・支援",
   love: "恋愛・婚活",
   parenting: "育児・ライフスタイル",
   other: "その他",
@@ -58,6 +60,7 @@ export const industryOrder: IndustryCategory[] = [
   "finance",
   "housing",
   "education",
+  "career",
   "love",
   "parenting",
   "other",
@@ -98,7 +101,7 @@ export const works: Work[] = [
     industryCategory: "staffing",
     title: "人材派遣企業のATSツール構築",
     summary:
-      "採用業務の生産性向上を目的に、ATS（採用管理）ツールの構築を担当。",
+      "採用業務の生産性向上を目的に、ATS(採用管理)ツールの構築を担当。",
     metrics: ["業務生産性UP"],
     scope: ["ATS", "業務効率化"],
   },
@@ -127,12 +130,12 @@ export const works: Work[] = [
   {
     id: "lp-willtec-engineer",
     category: "lp",
-    industry: "エンジニア派遣（新卒採用）",
+    industry: "エンジニア派遣(新卒採用)",
     industryCategory: "staffing",
-    title: "エンジニア派遣会社の新卒採用LP",
+    title: "エンジニア派遣会社の新卒採用LP制作",
     summary:
-      "理系学生限定のエンジニアキャリアセミナーへの集客LPを担当。学生視点でのキャリア訴求の構成設計・コピー監修を一貫対応。",
-    scope: ["構成設計", "コピー監修", "新卒採用LP"],
+      "理系学生限定のエンジニアキャリアセミナーへの集客LP制作を担当。学生視点でのキャリア訴求の構成設計・コピー監修を一貫対応。",
+    scope: ["構成設計", "コピー監修", "新卒採用LP制作"],
     url: "https://campaign-link.studio.site/gaxi-willtec/careerseminar",
     recent: true,
     needsHearing: true,
@@ -140,11 +143,11 @@ export const works: Work[] = [
   {
     id: "lp-baseme-gakushi",
     category: "lp",
-    industry: "HRtech（サイト集客）",
+    industry: "HRtech(サイト集客)",
     industryCategory: "staffing",
-    title: "HRtechサービスの集客LP",
+    title: "HRtechサービスの集客LP制作",
     summary:
-      "HRtechサービスの会員獲得を目的としたコラボキャンペーンLP。プロフィール作成→特典訴求で会員登録を促進する構成設計を担当。",
+      "HRtechサービスの会員獲得を目的としたコラボキャンペーンLP制作。プロフィール作成→特典訴求で会員登録を促進する構成設計を担当。",
     scope: ["構成設計", "キャンペーン設計", "コピー監修"],
     url: "https://baseme.app/lp/gaxi202512",
     recent: true,
@@ -153,12 +156,12 @@ export const works: Work[] = [
   {
     id: "lp-jkhd-internship",
     category: "lp",
-    industry: "新卒採用（インターン集客）",
+    industry: "新卒採用(インターン集客)",
     industryCategory: "staffing",
-    title: "27卒インターン集客LP",
+    title: "27卒インターン集客LP制作",
     summary:
-      "27卒向け体験型インターンの集客LPを担当。学生視点での参加メリット訴求の構成設計を実施。",
-    scope: ["構成設計", "コピー監修", "新卒採用LP"],
+      "27卒向け体験型インターンの集客LP制作を担当。学生視点での参加メリット訴求の構成設計を実施。",
+    scope: ["構成設計", "コピー監修", "新卒採用LP制作"],
     url: "https://campaign-link.studio.site/jkhd/20251129",
     recent: true,
     needsHearing: true,
@@ -166,7 +169,7 @@ export const works: Work[] = [
   {
     id: "ads-shinsotsu-event",
     category: "ads",
-    industry: "新卒採用（スーパーバイザー職）",
+    industry: "新卒採用(スーパーバイザー職)",
     industryCategory: "staffing",
     title: "スーパーバイザーの新卒採用集客広告運用",
     summary:
@@ -181,7 +184,7 @@ export const works: Work[] = [
     category: "lp",
     industry: "アパレル特化人材派遣",
     industryCategory: "staffing",
-    title: "アパレル系特化の人材派遣LP",
+    title: "アパレル系特化の人材派遣LP制作",
     summary:
       "アパレル業界に特化した人材派遣サービスのLP制作。業界文脈に合わせた構成・コピーで設計。",
     scope: ["構成設計", "コピー監修"],
@@ -204,7 +207,7 @@ export const works: Work[] = [
   {
     id: "ads-fire-insurance",
     category: "ads",
-    industry: "金融（火災保険）",
+    industry: "金融(火災保険)",
     industryCategory: "finance",
     title: "火災保険のリスティング広告運用",
     summary:
@@ -217,22 +220,22 @@ export const works: Work[] = [
   {
     id: "lp-fire-insurance",
     category: "lp",
-    industry: "金融（火災保険）",
+    industry: "金融(火災保険)",
     industryCategory: "finance",
-    title: "火災保険LPの新規制作",
+    title: "火災保険LP制作",
     summary:
-      "ヒアリング・競合分析・ワイヤーフレーム設計・構成設計・広告運用までを一貫して担当した火災保険LP案件。",
+      "ヒアリング・競合分析・ワイヤーフレーム設計・構成設計・広告運用までを一貫して担当した火災保険LP制作案件。",
     scope: ["ヒアリング", "競合分析", "ワイヤー", "広告連動"],
     url: "https://www.sala-fs.co.jp/salanokasaihoken/",
   },
   {
     id: "lp-reverse-mortgage",
     category: "lp",
-    industry: "金融（リバースモーゲージ）",
+    industry: "金融(リバースモーゲージ)",
     industryCategory: "finance",
-    title: "リバースモーゲージLP",
+    title: "リバースモーゲージLP制作",
     summary:
-      "シニア層向け金融商材のLPを制作。商材理解と読み手の不安を踏まえた構成設計を実施。",
+      "シニア層向け金融商材のLP制作を担当。商材理解と読み手の不安を踏まえた構成設計を実施。",
     scope: ["構成設計", "ディレクション"],
     url: "https://www.sala-fs.co.jp/yutorian/",
   },
@@ -241,22 +244,22 @@ export const works: Work[] = [
     category: "lp",
     industry: "金融(リースバック)",
     industryCategory: "finance",
-    title: "リースバックLP",
+    title: "リースバックLP制作",
     summary:
-      "金融商材のリースバックLP。複雑な仕組みを噛み砕いて訴求する構成設計を担当。",
+      "金融商材のリースバックLP制作を担当。複雑な仕組みを噛み砕いて訴求する構成設計を担当。",
     scope: ["構成設計"],
     url: "https://andrenovation.sala.jp/leaseback_lp/",
   },
   {
     id: "aff-ad",
     category: "affiliate",
-    industry: "金融商品（FXツール）",
+    industry: "金融商品(FXツール)",
     industryCategory: "finance",
-    title: "アドアフィリエイト（直接提携）",
+    title: "アドアフィリエイト(直接提携)",
     summary:
-      "Meta広告とLPを組み合わせ、販売元との直接提携で運用。LP制作・Lステップ構築・販売導線設計までDRMの一連の流れを実体験。",
+      "Meta広告とLP制作を組み合わせ、販売元との直接提携で運用。LP制作・Lステップ構築・販売導線設計までDRMの一連の流れを実体験。",
     metrics: ["月商70万円達成", "LP CVR 15〜35%", "CPA 250〜500円"],
-    scope: ["Meta広告", "LP", "Lステップ", "DRM"],
+    scope: ["Meta広告", "LP制作", "Lステップ", "DRM"],
   },
 
   // ============================================================
@@ -265,11 +268,11 @@ export const works: Work[] = [
   {
     id: "ads-ecocute",
     category: "ads",
-    industry: "住宅設備（エコキュート）",
+    industry: "住宅設備(エコキュート)",
     industryCategory: "housing",
     title: "エコキュート買い替えキャンペーン",
     summary:
-      "「壊れて困った瞬間に検索する」商材特性から逆算し、認知（LINE広告）→刈り取り（Google検索）の二段配信を設計。結果としてCV経路はリスティング側に集約された。",
+      "「壊れて困った瞬間に検索する」商材特性から逆算し、認知(LINE広告)→刈り取り(Google検索)の二段配信を設計。結果としてCV経路はリスティング側に集約された。",
     metrics: ["成約 3件", "ROAS 750%", "CPA 20,000円"],
     scope: ["LINE広告", "Google広告", "戦略設計"],
   },
@@ -278,20 +281,10 @@ export const works: Work[] = [
     category: "lp",
     industry: "不動産買取",
     industryCategory: "housing",
-    title: "不動産買取LP",
+    title: "不動産買取LP制作",
     summary:
       "不動産買取サービスのLP制作。査定〜買取までの導線設計を含めた構成。",
     scope: ["構成設計"],
-  },
-  {
-    id: "pm-housing-group",
-    category: "pm",
-    industry: "大手住宅関連グループ",
-    industryCategory: "housing",
-    title: "大手住宅関連グループの複数商材PM",
-    summary:
-      "セルフ式ドッグスパ／火災保険／リバースモーゲージなど、グループ内の複数サービスのPMを担当。",
-    scope: ["複数商材PM", "戦略設計"],
   },
   {
     id: "cons-housing-lecturer",
@@ -302,6 +295,17 @@ export const works: Work[] = [
     summary:
       "社内マーケターの育成を目的に、WEBマーケのテーマで講義・勉強会を担当。",
     scope: ["社内教育", "講師"],
+  },
+  {
+    id: "cons-dog-spa",
+    category: "consulting",
+    industry: "セルフ式ドッグスパ",
+    industryCategory: "housing",
+    title: "セルフ式ドッグスパの集客コンサル",
+    summary:
+      "セルフ式ドッグスパサービスの集客戦略・運用方針について、コンサルティングを担当。",
+    scope: ["集客戦略", "コンサル"],
+    needsHearing: true,
   },
 
   // ============================================================
@@ -334,15 +338,14 @@ export const works: Work[] = [
     needsHearing: true,
   },
   {
-    id: "ads-ryugaku-scholarship",
-    category: "ads",
-    industry: "留学奨学金サイト",
+    id: "cons-designer-school",
+    category: "consulting",
+    industry: "デザイナー収益化スクール",
     industryCategory: "education",
-    title: "留学奨学金サイトのMeta広告運用",
+    title: "デザイナー収益化マーケスクールの講師",
     summary:
-      "業界平均CPA 2〜3万円のジャンルで、業界平均の1/5以下のCPA水準を実現した運用事例。",
-    metrics: ["CPA 4,000円台", "業界平均 2〜3万円"],
-    scope: ["Meta広告", "クリエイティブ"],
+      "デザイナーが収益化するためのマーケティングをテーマに、スクール内で講師として登壇。",
+    scope: ["講師", "カリキュラム設計"],
     recent: true,
     needsHearing: true,
   },
@@ -370,7 +373,24 @@ export const works: Work[] = [
   },
 
   // ============================================================
-  // 恋愛・婚活 (7件)
+  // キャリア・支援 (1件)
+  // ============================================================
+  {
+    id: "ads-ryugaku-scholarship",
+    category: "ads",
+    industry: "留学奨学金サイト",
+    industryCategory: "career",
+    title: "留学奨学金サイトのMeta広告運用",
+    summary:
+      "業界平均CPA 2〜3万円のジャンルで、業界平均の1/5以下のCPA水準を実現した運用事例。",
+    metrics: ["CPA 4,000円台", "業界平均 2〜3万円"],
+    scope: ["Meta広告", "クリエイティブ"],
+    recent: true,
+    needsHearing: true,
+  },
+
+  // ============================================================
+  // 恋愛・婚活 (6件)
   // ============================================================
   {
     id: "ads-konkatsu",
@@ -386,22 +406,11 @@ export const works: Work[] = [
     needsHearing: true,
   },
   {
-    id: "ads-konkatsu-counseling",
-    category: "ads",
-    industry: "婚活カウンセリング",
-    industryCategory: "love",
-    title: "コンセプトテスト目的のMeta広告運用",
-    summary:
-      "コンセプト訴求の反応率比較を目的に、限られた予算でMeta広告のクリエイティブ検証を実施。",
-    metrics: ["メルマガ登録 CPA 400円台"],
-    scope: ["Meta広告", "コンセプトテスト"],
-  },
-  {
     id: "lp-konkatsu-store",
     category: "lp",
     industry: "結婚相談所",
     industryCategory: "love",
-    title: "結婚相談所 実店舗集客LP",
+    title: "結婚相談所 実店舗集客LP制作",
     summary:
       "結婚相談所の実店舗集客に向けたLP制作。エリア・ターゲット文脈を踏まえた設計。",
     scope: ["構成設計", "店舗集客"],
@@ -412,10 +421,10 @@ export const works: Work[] = [
     category: "lp",
     industry: "結婚相談所",
     industryCategory: "love",
-    title: "結婚相談所 Meta広告用LP",
+    title: "結婚相談所 Meta広告用LP制作",
     summary:
-      "Meta広告流入用のリード獲得LP。マッチングアプリ運用ノウハウの訴求を目的とした構成設計を担当。",
-    scope: ["構成設計", "Meta広告連動", "リード獲得LP"],
+      "Meta広告流入用のリード獲得LP制作。マッチングアプリ運用ノウハウの訴求を目的とした構成設計を担当。",
+    scope: ["構成設計", "Meta広告連動", "リード獲得LP制作"],
     url: "https://all-syugo.hp.peraichi.com/meta_lp1",
     recent: true,
     needsHearing: true,
@@ -423,7 +432,7 @@ export const works: Work[] = [
   {
     id: "sns-konkatsu-store",
     category: "sns",
-    industry: "結婚相談所（実店舗）",
+    industry: "結婚相談所(実店舗)",
     industryCategory: "love",
     title: "結婚相談所 実店舗アカウント運用",
     summary:
@@ -432,25 +441,26 @@ export const works: Work[] = [
     scope: ["Instagram", "MEO連動"],
   },
   {
-    id: "pm-konkatsu",
-    category: "pm",
-    industry: "結婚相談所",
-    industryCategory: "love",
-    title: "結婚相談所のPM",
-    summary:
-      "ターゲットペルソナの再設計とフロント商品の設計までを担当。事業全体のファネル整理に貢献。",
-    scope: ["ペルソナ設計", "フロント商品設計"],
-  },
-  {
     id: "aff-sns",
     category: "affiliate",
     industry: "恋愛系SNS",
     industryCategory: "love",
-    title: "SNSアフィリエイト（恋愛系）",
+    title: "SNSアフィリエイト(恋愛系)",
     summary:
       "Instagram・TikTokを併用し、占いサイト／マッチングアプリ／結婚相談所案件をアフィリエイト。マネタイズから逆算したコンセプト設計で、少フォロワーでも成果を実現。",
     metrics: ["300フォロワーで月5万円マネタイズ"],
     scope: ["Instagram", "TikTok", "コンセプト設計"],
+  },
+  {
+    id: "ads-konkatsu-counseling",
+    category: "ads",
+    industry: "婚活カウンセリング",
+    industryCategory: "love",
+    title: "コンセプトテスト目的のMeta広告運用",
+    summary:
+      "コンセプト訴求の反応率比較を目的に、限られた予算でMeta広告のクリエイティブ検証を実施。",
+    metrics: ["メルマガ登録 CPA 400円台"],
+    scope: ["Meta広告", "コンセプトテスト"],
   },
 
   // ============================================================
@@ -463,7 +473,8 @@ export const works: Work[] = [
     industryCategory: "parenting",
     title: "離乳食系Instagramアカウントのコンサル",
     summary:
-      "Instagramアカウントの戦略・コンテンツ設計についてコンサルティング。",
+      "フォロワー3.5万人規模の離乳食系Instagramアカウントに対し、戦略・コンテンツ設計についてコンサルティングを実施。",
+    metrics: ["フォロワー 3.5万人規模"],
     scope: ["Instagram", "コンサル"],
   },
 
@@ -477,29 +488,30 @@ export const works: Work[] = [
     industryCategory: "other",
     title: "薬局フランチャイズ加盟の集客",
     summary:
-      "「LPなし／導線曖昧」の状態から、LP制作・導線設計・Meta×Googleの二段運用までを土台ごと再構築。",
+      "「LP制作なし／導線曖昧」の状態から、LP制作・導線設計・Meta×Googleの二段運用までを土台ごと再構築。",
     metrics: ["問合せ数 0件 → 8件"],
     scope: ["LPO", "導線構築", "Meta広告", "Google広告"],
   },
   {
-    id: "pm-pharmacy-fc",
-    category: "pm",
+    id: "cons-pharmacy-fc",
+    category: "consulting",
     industry: "薬局フランチャイズ",
     industryCategory: "other",
-    title: "薬局フランチャイズ加盟の集客戦略",
+    title: "薬局フランチャイズ加盟の集客戦略コンサル",
     summary:
       "「薬剤師が経営者に提案する」導線設計を含む、限定ターゲット向けの集客戦略を企画。",
     scope: ["導線設計", "戦略立案"],
   },
   {
-    id: "pm-bee",
-    category: "pm",
+    id: "cons-bee",
+    category: "consulting",
     industry: "蜂駆除サービス",
     industryCategory: "other",
-    title: "蜂駆除サービスのPM",
+    title: "蜂駆除サービスの広告運用コンサル",
     summary:
-      "ニッチ商材の集客戦略・サービス設計に並走。",
-    scope: ["戦略設計"],
+      "ニッチ商材の広告運用について、戦略立案から運用方針までをコンサルティング。",
+    scope: ["広告運用コンサル", "戦略設計"],
+    needsHearing: true,
   },
   {
     id: "cons-local-event",
