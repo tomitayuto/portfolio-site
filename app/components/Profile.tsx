@@ -19,7 +19,7 @@ const skills = [
 ];
 
 export default function Profile() {
-  const [openId, setOpenId] = useState<string | null>(serviceCategories[0].id);
+  const [openId, setOpenId] = useState<string | null>(null);
 
   return (
     <section id="skills" className="section-pad border-t border-border bg-surface">
