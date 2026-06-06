@@ -8,7 +8,7 @@ export type WorkCategory =
   | "affiliate";
 
 export const categoryLabels: Record<WorkCategory, string> = {
-  pm: "プロダクトマネジメント",
+  pm: "事業推進・CMO",
   consulting: "コンサル・講師",
   lp: "LP制作・LPO",
   crm: "CRM構築",
