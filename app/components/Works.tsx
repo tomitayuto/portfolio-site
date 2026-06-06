@@ -33,6 +33,14 @@ function WorkCard({ w }: { w: Work }) {
         <span className="rounded-full bg-accent-soft px-2.5 py-0.5 font-display text-[10px] font-medium tracking-wider text-accent">
           {categoryLabels[w.category]}
         </span>
+        {w.extraCategories?.map((cat) => (
+          <span
+            key={cat}
+            className="rounded-full bg-accent-soft px-2.5 py-0.5 font-display text-[10px] font-medium tracking-wider text-accent"
+          >
+            {categoryLabels[cat]}
+          </span>
+        ))}
         {w.ongoing && (
           <span className="inline-flex items-center gap-1 rounded-full border border-accent/50 px-2.5 py-0.5 font-display text-[10px] font-medium text-accent">
             <Clock size={10} strokeWidth={2} />
@@ -118,7 +126,9 @@ export default function Works() {
   // フィルター適用後の作品リスト
   const filtered = useMemo(() => {
     if (filter === "all") return works;
-    return works.filter((w) => w.category === filter);
+    return works.filter(
+      (w) => w.category === filter || w.extraCategories?.includes(filter),
+    );
   }, [filter]);
 
   // 業種ごとにグルーピング（業種順を保つ）
@@ -149,7 +159,10 @@ export default function Works() {
             const count =
               b.id === "all"
                 ? works.length
-                : works.filter((w) => w.category === b.id).length;
+                : works.filter(
+                    (w) =>
+                      w.category === b.id || w.extraCategories?.includes(b.id),
+                  ).length;
             return (
               <button
                 key={b.id}

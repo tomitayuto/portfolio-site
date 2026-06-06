@@ -30,6 +30,7 @@ export type IndustryCategory =
 export type Work = {
   id: string;
   category: WorkCategory;
+  extraCategories?: WorkCategory[]; // 追加バッジ表示用（複数カテゴリにまたがる案件）
   industry: string;
   industryCategory: IndustryCategory; // 業種グルーピング用
   title: string;
@@ -130,13 +131,14 @@ export const works: Work[] = [
   {
     id: "lp-willtec-engineer",
     category: "ads",
+    extraCategories: ["lp"],
     industry: "エンジニア派遣(新卒採用)",
     industryCategory: "staffing",
     title: "エンジニア派遣会社の新卒採用WEB集客",
     summary:
-      "新卒採用の入り口となるセミナー集客を目的に、メタ広告の運用・LP制作・広告クリエイティブ制作まで、一気通貫で対応しています。LP設計から配信運用まで、WEB集客の全領域をワンストップで担当しました。",
-    metrics: ["CPA 4,000円台", "メタ広告×LP×CR一貫対応"],
-    scope: ["メタ広告運用", "LP制作", "広告クリエイティブ制作", "WEB戦略"],
+      "新卒採用の入り口となるセミナー集客を目的に、Meta広告の運用・LP制作・広告CR制作まで、一気通貫で対応しています。LPの設計から広告運用まで、WEB集客の全領域をワンストップで担当しました。",
+    metrics: ["CPA 4,000円台", "Meta広告×LP×CR一貫対応"],
+    scope: ["Meta広告運用", "LP制作", "広告CR制作", "WEB戦略"],
     ongoing: true,
     url: [
       "https://campaign-link.studio.site/gaxi-willtec/careerseminar",
