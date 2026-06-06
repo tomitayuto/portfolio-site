@@ -137,7 +137,7 @@ export const works: Work[] = [
     title: "エンジニア派遣会社の新卒採用WEB集客",
     summary:
       "新卒採用の入り口となるセミナー集客を目的に、Meta広告の運用・LP制作・広告CR制作まで、一気通貫で対応しています。LPの設計から広告運用まで、WEB集客の全領域をワンストップで担当しました。",
-    metrics: ["CPA 4,000円台", "Meta広告×LP×CR一貫対応"],
+    metrics: ["CPA 4,000円台", "Meta広告×LP制作×CR制作 一貫対応"],
     scope: ["Meta広告運用", "LP制作", "広告CR制作", "WEB戦略"],
     ongoing: true,
     url: [
