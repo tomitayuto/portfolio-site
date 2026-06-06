@@ -76,21 +76,38 @@ function WorkCard({ w }: { w: Work }) {
         </ul>
       )}
 
-      {w.url ? (
-        <a
-          href={w.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center gap-1 self-start rounded-full border border-accent/40 bg-accent-soft px-3 py-1 font-display text-xs font-medium text-accent transition-colors hover:border-accent hover:bg-accent hover:text-background"
-        >
-          公開中のLPを見る
-          <ArrowUpRight size={12} strokeWidth={2} />
-        </a>
-      ) : w.comingSoon ? (
-        <span className="mt-4 inline-flex items-center gap-1 self-start rounded-full border border-border bg-surface px-3 py-1 font-display text-xs font-medium text-subtle">
-          現在制作中...
-        </span>
-      ) : null}
+      {(() => {
+        const urls = w.url ? (Array.isArray(w.url) ? w.url : [w.url]) : [];
+        if (urls.length > 0) {
+          const numerals = ["①", "②", "③", "④", "⑤"];
+          return (
+            <div className="mt-4 flex flex-wrap gap-2">
+              {urls.map((href, i) => (
+                <a
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 self-start rounded-full border border-accent/40 bg-accent-soft px-3 py-1 font-display text-xs font-medium text-accent transition-colors hover:border-accent hover:bg-accent hover:text-background"
+                >
+                  {urls.length > 1
+                    ? `公開中のLP${numerals[i] ?? `(${i + 1})`}を見る`
+                    : "公開中のLPを見る"}
+                  <ArrowUpRight size={12} strokeWidth={2} />
+                </a>
+              ))}
+            </div>
+          );
+        }
+        if (w.comingSoon) {
+          return (
+            <span className="mt-4 inline-flex items-center gap-1 self-start rounded-full border border-border bg-surface px-3 py-1 font-display text-xs font-medium text-subtle">
+              現在制作中...
+            </span>
+          );
+        }
+        return null;
+      })()}
     </article>
   );
 }

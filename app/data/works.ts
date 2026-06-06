@@ -39,7 +39,7 @@ export type Work = {
   ongoing?: boolean; // 対応中フラグ（バッジ表示）
   needsHearing?: boolean; // 詳細ヒアリングが必要
   comingSoon?: boolean; // 制作中（公開予定）フラグ
-  url?: string; // 公開中LP・サービスのURL
+  url?: string | string[]; // 公開中LP・サービスのURL（複数の場合は配列）
 };
 
 // 業種カテゴリ名（industryCategory → 表示名）
@@ -129,15 +129,19 @@ export const works: Work[] = [
   },
   {
     id: "lp-willtec-engineer",
-    category: "lp",
+    category: "ads",
     industry: "エンジニア派遣(新卒採用)",
     industryCategory: "staffing",
-    title: "エンジニア派遣会社の新卒採用LP制作",
+    title: "エンジニア派遣会社の新卒採用WEB集客",
     summary:
-      "理系学生限定のエンジニアキャリアセミナーへの集客LP制作を担当しました。学生視点でのキャリア訴求の構成設計・コピー監修まで、一貫して対応しています。",
-    scope: ["構成設計", "コピー監修", "新卒採用LP制作"],
-    url: "https://campaign-link.studio.site/gaxi-willtec/careerseminar",
-    needsHearing: true,
+      "新卒採用の入り口となるセミナー集客を目的に、メタ広告の運用・LP制作・広告クリエイティブ制作まで、一気通貫で対応しています。LP設計から配信運用まで、WEB集客の全領域をワンストップで担当しました。",
+    metrics: ["CPA 4,000円台", "メタ広告×LP×CR一貫対応"],
+    scope: ["メタ広告運用", "LP制作", "広告クリエイティブ制作", "WEB戦略"],
+    ongoing: true,
+    url: [
+      "https://campaign-link.studio.site/gaxi-willtec/careerseminar",
+      "https://campaign-link.studio.site/gaxi-willtec/careerseminar-c",
+    ],
   },
   {
     id: "lp-baseme-gakushi",
