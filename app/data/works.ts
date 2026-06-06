@@ -36,8 +36,7 @@ export type Work = {
   summary: string;
   metrics?: string[]; // 強調表示する成果（複数可）
   scope?: string[]; // タグ
-  recent?: boolean; // 直近1年フラグ
-  ongoing?: boolean; // 継続中フラグ
+  ongoing?: boolean; // 対応中フラグ（バッジ表示）
   needsHearing?: boolean; // 詳細ヒアリングが必要
   comingSoon?: boolean; // 制作中（公開予定）フラグ
   url?: string; // 公開中LP・サービスのURL
@@ -81,7 +80,6 @@ export const works: Work[] = [
       "運用型広告の広告運用から求人広告代理店のコントロールまで、広告に関わる業務を一貫して対応しました。",
     metrics: ["応募単価 5,000円", "採用単価 12,000円", "ROAS 4,500%"],
     scope: ["広告運用", "クリエイティブ制作", "求人原稿制作", "LP制作"],
-    recent: true,
     needsHearing: true,
   },
   {
@@ -123,10 +121,10 @@ export const works: Work[] = [
     industryCategory: "staffing",
     title: "大手人材会社の新卒採用イベントLP制作",
     summary:
-      "大手人材会社が主催する新卒採用イベントに、コンサルとLP制作の両軸で伴走しています。集客とブランディングを両立する設計を軸に、ワイヤーフレーム作成や戦略提案まで含め、コンセプトから制作まで一貫して進めています。",
+      "大手人材会社が主催する新卒採用イベントの集客用LPを、コンサルティングと制作の両軸でサポートしています。クライアントから提示された要件に対し、構成とデザインの両面から最適な提案を行い、ブランディングと集客を両立する設計を進めています。",
     metrics: ["業界大手案件", "コンサル×制作"],
     scope: ["コンセプト設計", "ワイヤーフレーム", "ディレクション", "戦略コンサル"],
-    recent: true,
+    ongoing: true,
     comingSoon: true,
   },
   {
@@ -139,7 +137,6 @@ export const works: Work[] = [
       "理系学生限定のエンジニアキャリアセミナーへの集客LP制作を担当しました。学生視点でのキャリア訴求の構成設計・コピー監修まで、一貫して対応しています。",
     scope: ["構成設計", "コピー監修", "新卒採用LP制作"],
     url: "https://campaign-link.studio.site/gaxi-willtec/careerseminar",
-    recent: true,
     needsHearing: true,
   },
   {
@@ -152,7 +149,6 @@ export const works: Work[] = [
       "HRtechサービスの会員獲得を目的としたコラボキャンペーンLPを制作しました。プロフィール作成→特典訴求で会員登録を促進する構成設計を担当しています。",
     scope: ["構成設計", "キャンペーン設計", "コピー監修"],
     url: "https://baseme.app/lp/gaxi202512",
-    recent: true,
     needsHearing: true,
   },
   {
@@ -165,7 +161,6 @@ export const works: Work[] = [
       "27卒向け体験型インターンの集客LP制作を担当しました。学生視点での参加メリット訴求の構成設計を実施しています。",
     scope: ["構成設計", "コピー監修", "新卒採用LP制作"],
     url: "https://campaign-link.studio.site/jkhd/20251129",
-    recent: true,
     needsHearing: true,
   },
   {
@@ -178,7 +173,6 @@ export const works: Work[] = [
       "スーパーバイザー職の新卒採用を目的とした集客広告を担当しました。ターゲットの行動文脈から逆算した配信設計でCPAを抑制しています。",
     metrics: ["CPA 5,000円"],
     scope: ["広告運用", "新卒採用"],
-    recent: true,
     needsHearing: true,
   },
   {
@@ -216,7 +210,6 @@ export const works: Work[] = [
       "Yahoo!・Googleリスティング広告を併用し、CPAを安定的に5,000円台へ落とし込んだ運用事例です。",
     metrics: ["CPA 5,000円台"],
     scope: ["Yahoo!広告", "Google広告", "リスティング"],
-    recent: true,
     needsHearing: true,
   },
   {
@@ -322,7 +315,6 @@ export const works: Work[] = [
     summary:
       "大手ビジネススクールのリスティング広告運用を担当しています。アカウント設計から日々の運用最適化まで、一貫して対応しています。",
     scope: ["Google広告", "リスティング"],
-    recent: true,
     ongoing: true,
     needsHearing: true,
   },
@@ -335,7 +327,6 @@ export const works: Work[] = [
     summary:
       "大手ビジネススクールにて、マーケティングをテーマに講師として登壇しています。受講者の課題に応じた実践的なカリキュラムで対応しています。",
     scope: ["講師", "カリキュラム設計"],
-    recent: true,
     ongoing: true,
     needsHearing: true,
   },
@@ -348,7 +339,6 @@ export const works: Work[] = [
     summary:
       "デザイナーが収益化するためのマーケティングをテーマに、スクール内で講師として登壇しています。",
     scope: ["講師", "カリキュラム設計"],
-    recent: true,
     needsHearing: true,
   },
   {
@@ -387,7 +377,6 @@ export const works: Work[] = [
       "業界平均CPA 2〜3万円のジャンルで、業界平均の1/5以下のCPA水準を実現した運用事例です。",
     metrics: ["CPA 4,000円台", "業界平均 2〜3万円"],
     scope: ["Meta広告", "クリエイティブ"],
-    recent: true,
     needsHearing: true,
   },
 
@@ -404,7 +393,6 @@ export const works: Work[] = [
       "限られた広告予算で、売上に直結する配信設計と検証を実施しました。少額予算でROAS25倍を実現した運用事例です。",
     metrics: ["広告費 2万円", "売上 50万円", "ROAS 2,500%"],
     scope: ["Meta広告", "クリエイティブ", "ターゲティング"],
-    recent: true,
     needsHearing: true,
   },
   {
@@ -428,7 +416,6 @@ export const works: Work[] = [
       "Meta広告流入用のリード獲得LPを制作しました。マッチングアプリ運用ノウハウの訴求を目的とした構成設計を担当しています。",
     scope: ["構成設計", "Meta広告連動", "リード獲得LP制作"],
     url: "https://all-syugo.hp.peraichi.com/meta_lp1",
-    recent: true,
     needsHearing: true,
   },
   {

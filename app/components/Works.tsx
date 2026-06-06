@@ -11,11 +11,10 @@ import {
   type WorkCategory,
 } from "../data/works";
 
-type Filter = "all" | "recent" | WorkCategory;
+type Filter = "all" | WorkCategory;
 
 const filterButtons: { id: Filter; label: string }[] = [
   { id: "all", label: "すべて" },
-  { id: "recent", label: "直近1年" },
   { id: "ads", label: categoryLabels.ads },
   { id: "lp", label: categoryLabels.lp },
   { id: "pm", label: categoryLabels.pm },
@@ -34,10 +33,10 @@ function WorkCard({ w }: { w: Work }) {
         <span className="rounded-full bg-accent-soft px-2.5 py-0.5 font-display text-[10px] font-medium tracking-wider text-accent">
           {categoryLabels[w.category]}
         </span>
-        {w.recent && (
+        {w.ongoing && (
           <span className="inline-flex items-center gap-1 rounded-full border border-accent/50 px-2.5 py-0.5 font-display text-[10px] font-medium text-accent">
             <Clock size={10} strokeWidth={2} />
-            直近1年
+            対応中
           </span>
         )}
       </div>
@@ -102,7 +101,6 @@ export default function Works() {
   // フィルター適用後の作品リスト
   const filtered = useMemo(() => {
     if (filter === "all") return works;
-    if (filter === "recent") return works.filter((w) => w.recent);
     return works.filter((w) => w.category === filter);
   }, [filter]);
 
@@ -134,8 +132,6 @@ export default function Works() {
             const count =
               b.id === "all"
                 ? works.length
-                : b.id === "recent"
-                ? works.filter((w) => w.recent).length
                 : works.filter((w) => w.category === b.id).length;
             return (
               <button
