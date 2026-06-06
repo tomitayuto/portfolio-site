@@ -77,7 +77,7 @@ function WorkCard({ w }: { w: Work }) {
         </ul>
       )}
 
-      {w.url && (
+      {w.url ? (
         <a
           href={w.url}
           target="_blank"
@@ -87,7 +87,11 @@ function WorkCard({ w }: { w: Work }) {
           公開中のLPを見る
           <ArrowUpRight size={12} strokeWidth={2} />
         </a>
-      )}
+      ) : w.comingSoon ? (
+        <span className="mt-4 inline-flex items-center gap-1 self-start rounded-full border border-border bg-surface px-3 py-1 font-display text-xs font-medium text-subtle">
+          現在制作中...
+        </span>
+      ) : null}
     </article>
   );
 }

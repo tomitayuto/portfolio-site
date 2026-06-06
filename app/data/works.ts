@@ -39,6 +39,7 @@ export type Work = {
   recent?: boolean; // 直近1年フラグ
   ongoing?: boolean; // 継続中フラグ
   needsHearing?: boolean; // 詳細ヒアリングが必要
+  comingSoon?: boolean; // 制作中（公開予定）フラグ
   url?: string; // 公開中LP・サービスのURL
 };
 
@@ -120,12 +121,13 @@ export const works: Work[] = [
     category: "lp",
     industry: "大手人材",
     industryCategory: "staffing",
-    title: "大手人材会社のLP制作",
+    title: "大手人材会社の新卒採用イベントLP制作",
     summary:
-      "大手人材会社のLP制作を担当しています。事業ターゲットを踏まえた設計・コピー・構成のディレクションを実施しました。",
-    scope: ["ヒアリング", "構成設計", "ディレクション"],
+      "大手人材会社が主催する新卒採用イベントに、コンサルとLP制作の両軸で伴走しています。集客とブランディングを両立する設計を軸に、ワイヤーフレーム作成や戦略提案まで含め、コンセプトから制作まで一貫して進めています。",
+    metrics: ["業界大手案件", "コンサル×制作"],
+    scope: ["コンセプト設計", "ワイヤーフレーム", "ディレクション", "戦略コンサル"],
     recent: true,
-    needsHearing: true,
+    comingSoon: true,
   },
   {
     id: "lp-willtec-engineer",
