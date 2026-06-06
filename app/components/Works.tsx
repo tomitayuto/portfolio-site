@@ -126,10 +126,15 @@ export default function Works() {
   // フィルター適用後の作品リスト
   const filtered = useMemo(() => {
     if (filter === "all") return works;
+    const cat: WorkCategory = filter;
     return works.filter(
-      (w) => w.category === filter || w.extraCategories?.includes(filter),
+      (w) => w.category === cat || w.extraCategories?.includes(cat),
     );
   }, [filter]);
+
+  const countForCategory = (cat: WorkCategory) =>
+    works.filter((w) => w.category === cat || w.extraCategories?.includes(cat))
+      .length;
 
   // 業種ごとにグルーピング（業種順を保つ）
   const grouped = useMemo(() => {
@@ -157,12 +162,7 @@ export default function Works() {
           {filterButtons.map((b) => {
             const isActive = filter === b.id;
             const count =
-              b.id === "all"
-                ? works.length
-                : works.filter(
-                    (w) =>
-                      w.category === b.id || w.extraCategories?.includes(b.id),
-                  ).length;
+              b.id === "all" ? works.length : countForCategory(b.id);
             return (
               <button
                 key={b.id}
