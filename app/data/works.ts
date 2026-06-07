@@ -183,16 +183,6 @@ export const works: Work[] = [
     scope: ["Meta広告運用", "広告CR制作", "媒体送客設計"],
   },
   {
-    id: "lp-apparel-staffing",
-    category: "lp",
-    industry: "アパレル特化人材派遣",
-    industryCategory: "staffing",
-    title: "アパレル系特化の人材派遣LP制作",
-    summary:
-      "アパレル業界に特化した人材派遣サービスのLPを制作しました。業界文脈に合わせた構成・コピーで設計しています。",
-    scope: ["構成設計", "コピー監修"],
-  },
-  {
     id: "ads-nurse",
     category: "ads",
     industry: "看護師転職エージェント",
