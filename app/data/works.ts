@@ -174,14 +174,13 @@ export const works: Work[] = [
   {
     id: "ads-shinsotsu-event",
     category: "ads",
-    industry: "新卒採用(スーパーバイザー職)",
+    industry: "BPO/コールセンター(新卒採用)",
     industryCategory: "staffing",
-    title: "スーパーバイザーの新卒採用集客広告運用",
+    title: "コールセンター管理者の新卒採用集客",
     summary:
-      "スーパーバイザー職の新卒採用を目的とした集客広告を担当しました。ターゲットの行動文脈から逆算した配信設計でCPAを抑制しています。",
-    metrics: ["CPA 5,000円"],
-    scope: ["広告運用", "新卒採用"],
-    needsHearing: true,
+      "コールセンターのスタッフを管理する、新卒からはイメージしづらいニッチな職種の集客広告を対応しました。LPは設けずマイナビページへ直接送客することで、まず職種理解を促す動線設計とし、CPC最小化とクリック数最大化を運用軸としています。",
+    metrics: ["CPC 56円", "マイナビ送客 前年比10倍以上"],
+    scope: ["Meta広告運用", "広告CR制作", "媒体送客設計"],
   },
   {
     id: "lp-apparel-staffing",
