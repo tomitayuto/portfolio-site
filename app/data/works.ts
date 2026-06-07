@@ -164,7 +164,7 @@ export const works: Work[] = [
     extraCategories: ["lp"],
     industry: "新卒採用(オフラインイベント)",
     industryCategory: "staffing",
-    title: "27卒オフラインインターンの集客",
+    title: "オフライン開催の27新卒向けインターンシップの集客",
     summary:
       "本社開催のオフライン型インターンシップ集客を目的に、Meta広告の運用・LP制作・広告CR制作まで一気通貫で対応しました。フォーム入力項目の多さやオフラインイベントというコンバージョンハードルがある中で、安定したCVRを実現しています。",
     metrics: ["CPA 9,500円", "CVR 1.9%"],
