@@ -147,15 +147,16 @@ export const works: Work[] = [
   },
   {
     id: "lp-baseme-gakushi",
-    category: "lp",
+    category: "ads",
+    extraCategories: ["lp"],
     industry: "HRtech(サイト集客)",
     industryCategory: "staffing",
-    title: "HRtechサービスの集客LP制作",
+    title: "新卒向けスカウトサービスの会員登録獲得WEB集客",
     summary:
-      "HRtechサービスの会員獲得を目的としたコラボキャンペーンLPを制作しました。プロフィール作成→特典訴求で会員登録を促進する構成設計を担当しています。",
-    scope: ["構成設計", "キャンペーン設計", "コピー監修"],
+      "新卒向けスカウトサービスの会員登録獲得を目的に、Meta広告の運用・LP制作・広告CR制作まで一気通貫で対応しました。LP側で高いCVRを実現したことが、広告成果の安定化にも繋がっています。",
+    metrics: ["CPA 1,600円", "CVR 7.6%"],
+    scope: ["Meta広告運用", "LP制作", "広告CR制作", "キャンペーン設計"],
     url: "https://baseme.app/lp/gaxi202512",
-    needsHearing: true,
   },
   {
     id: "lp-jkhd-internship",
