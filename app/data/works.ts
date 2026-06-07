@@ -160,15 +160,16 @@ export const works: Work[] = [
   },
   {
     id: "lp-jkhd-internship",
-    category: "lp",
-    industry: "新卒採用(インターン集客)",
+    category: "ads",
+    extraCategories: ["lp"],
+    industry: "新卒採用(オフラインイベント)",
     industryCategory: "staffing",
-    title: "27卒インターン集客LP制作",
+    title: "27卒オフラインインターンの集客",
     summary:
-      "27卒向け体験型インターンの集客LP制作を担当しました。学生視点での参加メリット訴求の構成設計を実施しています。",
-    scope: ["構成設計", "コピー監修", "新卒採用LP制作"],
+      "本社開催のオフライン型インターンシップ集客を目的に、Meta広告の運用・LP制作・広告CR制作まで一気通貫で対応しました。フォーム入力項目の多さやオフラインイベントというコンバージョンハードルがある中で、安定したCVRを実現しています。",
+    metrics: ["CPA 9,500円", "CVR 1.9%"],
+    scope: ["Meta広告運用", "LP制作", "広告CR制作"],
     url: "https://campaign-link.studio.site/jkhd/20251129",
-    needsHearing: true,
   },
   {
     id: "ads-shinsotsu-event",
