@@ -79,9 +79,9 @@ export const works: Work[] = [
     industryCategory: "staffing",
     title: "工場系人材派遣会社の広告運用",
     summary:
-      "広告まわりを一気通貫で担当しました。3年半以上にわたって、LINE・Meta・Googleの運用型広告の運用、Meta・LINE広告のCR制作に加え、求人広告の求人原稿および関連バナーの制作まで、広告に関わる業務を幅広く対応しています。",
+      "3年半以上にわたり広告まわりを一気通貫で担当しました。LINE・Meta・Googleの広告運用、広告CR制作、求人広告の求人原稿および関連バナー制作、LP制作まで、広告に関わる業務を幅広く対応しています。",
     metrics: ["応募単価 5,000円", "採用単価 12,000円", "ROAS 4,500%"],
-    scope: ["LINE/Meta/Google広告運用", "広告CR制作", "求人原稿・バナー制作", "LP制作"],
+    scope: ["LINE/Meta/Google広告運用", "Meta/LINE広告CR制作", "求人原稿・バナー制作", "LP制作"],
   },
   {
     id: "crm-lstep",
