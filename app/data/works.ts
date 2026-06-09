@@ -195,30 +195,28 @@ export const works: Work[] = [
   },
 
   // ============================================================
-  // 金融・保険 (5件)
+  // 金融・保険 (4件)
   // ============================================================
   {
     id: "ads-fire-insurance",
     category: "ads",
-    industry: "金融(火災保険)",
+    extraCategories: ["lp"],
+    industry: "火災保険",
     industryCategory: "finance",
-    title: "火災保険のリスティング広告運用",
+    title: "火災保険の広告運用＋LP制作",
     summary:
-      "Yahoo!・Googleリスティング広告を併用し、CPAを安定的に5,000円台へ落とし込んだ運用事例です。",
-    metrics: ["CPA 5,000円台"],
-    scope: ["Yahoo!広告", "Google広告", "リスティング"],
-    needsHearing: true,
-  },
-  {
-    id: "lp-fire-insurance",
-    category: "lp",
-    industry: "金融(火災保険)",
-    industryCategory: "finance",
-    title: "火災保険LP制作",
-    summary:
-      "ヒアリング・競合分析・ワイヤーフレーム設計・構成設計・広告運用までを一貫して担当した火災保険LP制作案件です。",
-    scope: ["ヒアリング", "競合分析", "ワイヤー", "広告連動"],
+      "対面営業用に制作したLPを、後からGoogle広告でも配信できるよう拡張した火災保険案件です。限られた予算でも、保険業界としては低水準のCPAを実現しています。",
+    metrics: ["CPA 5,000円台", "CVR 5%前後"],
+    scope: [
+      "Meta広告運用",
+      "Google広告運用",
+      "Yahoo!広告運用",
+      "LP制作",
+      "戦略設計",
+      "低予算最適化",
+    ],
     url: "https://www.sala-fs.co.jp/salanokasaihoken/",
+    ongoing: true,
   },
   {
     id: "lp-reverse-mortgage",
