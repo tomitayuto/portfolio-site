@@ -81,7 +81,7 @@ export const works: Work[] = [
     summary:
       "3年半以上にわたり広告まわりを一気通貫で担当しました。LINE・Meta・Googleの広告運用、広告CR制作、求人広告の求人原稿および関連バナー制作、LP制作まで、広告に関わる業務を幅広く対応しています。",
     metrics: ["応募単価 5,000円", "採用単価 12,000円", "ROAS 4,500%"],
-    scope: ["LINE/Meta/Google広告運用", "Meta/LINE広告CR制作", "求人原稿・バナー制作", "LP制作"],
+    scope: ["LINE広告運用", "Meta広告運用", "Google広告運用", "CR制作", "求人原稿制作", "LP制作"],
   },
   {
     id: "crm-lstep",
