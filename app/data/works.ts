@@ -203,7 +203,7 @@ export const works: Work[] = [
     extraCategories: ["lp"],
     industry: "火災保険",
     industryCategory: "finance",
-    title: "火災保険の広告運用＋LP制作",
+    title: "火災保険のLP制作＋広告運用",
     summary:
       "対面営業用に制作したLPを、後からGoogle広告でも配信できるよう拡張した火災保険案件です。限られた予算でも、保険業界としては低水準のCPAを実現しています。",
     metrics: ["CPA 5,000円台", "CVR 5%前後"],
