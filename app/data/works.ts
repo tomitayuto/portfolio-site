@@ -225,7 +225,7 @@ export const works: Work[] = [
     industryCategory: "finance",
     title: "リバースモーゲージのLP制作",
     summary:
-      "丁寧な競合分析を踏まえ、検索広告に最適化したリバースモーゲージのLP制作を担当しました。クライアントが運用するYahoo!リスティング・Google広告では、業界水準を大きく上回るCVRが出ています。",
+      "丁寧な競合分析を踏まえ、検索広告に最適化したリバースモーゲージのLP制作を担当しました。クライアントが運用するYahoo!・Googleのリスティング広告では、業界水準を大きく上回るCVRが出ています。",
     metrics: ["CVR 30〜50%", "CPA 400〜600円"],
     scope: ["LP制作", "3C分析", "ライティング", "ディレクション"],
     url: "https://www.sala-fs.co.jp/yutorian/",
