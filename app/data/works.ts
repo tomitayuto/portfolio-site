@@ -235,10 +235,10 @@ export const works: Work[] = [
     category: "lp",
     industry: "金融(リースバック)",
     industryCategory: "finance",
-    title: "リースバックLP制作",
+    title: "リースバックのLP制作",
     summary:
-      "金融商材のリースバックLP制作を担当しました。複雑な仕組みを噛み砕いて訴求する構成設計を担当しています。",
-    scope: ["構成設計"],
+      "丁寧な競合分析を踏まえ、リースバックのLP制作を担当しました。広告配信だけでなく、営業時のタブレット提示や商品紹介ページなど、多様な営業シーンでも使える構成に仕上げています。",
+    scope: ["LP制作", "3C分析", "構成設計", "ライティング", "ディレクション"],
     url: "https://andrenovation.sala.jp/leaseback_lp/",
   },
   {
