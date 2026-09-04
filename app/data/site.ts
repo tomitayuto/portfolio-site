@@ -21,7 +21,7 @@ export const site = {
 export const credentials = [
   { label: "屋号", value: "WEBマーケの超☆伴走屋" },
   { label: "WEBマーケ歴", value: "6年目" },
-  { label: "現在の担当", value: "4社（うち1社CMO）" },
+  { label: "現在の担当", value: "5社（うち1社CMO）" },
   { label: "累計広告運用額", value: "1億円以上" },
   { label: "支援実績", value: "20社以上" },
 ];
@@ -31,7 +31,7 @@ export const stats = [
   { value: "６年目", label: "WEBマーケ歴", note: null as string | null },
   { value: "２０社以上", label: "支援実績", note: null as string | null },
   { value: "１億円以上", label: "累計広告運用額", note: null as string | null },
-  { value: "４社", label: "現在対応中の案件", note: "うち１社でCMO" },
+  { value: "５社", label: "現在対応中の案件", note: "うち１社でCMO" },
 ];
 
 // 対応業務カテゴリ（6カテゴリ）
