@@ -122,11 +122,10 @@ export const works: Work[] = [
     industryCategory: "staffing",
     title: "大手人材会社の新卒採用イベントLP制作",
     summary:
-      "大手人材会社が主催する新卒採用イベントの集客用LPを、コンサルティングと制作の両軸でサポートしています。クライアントから提示された要件に対し、構成とデザインの両面から最適な提案を行い、ブランディングと集客を両立する設計を進めています。",
+      "大手人材会社が主催する新卒採用イベントの集客用LPを、コンサルティングと制作の両軸でサポートしました。クライアントから提示された要件に対し、構成とデザインの両面から最適な提案を行い、ブランディングと集客を両立する設計に仕上げました。",
     metrics: ["業界大手案件", "コンサル×制作"],
     scope: ["コンセプト設計", "ワイヤーフレーム", "ディレクション", "戦略コンサル"],
-    ongoing: true,
-    comingSoon: true,
+    url: "https://www.persol-career.co.jp/recruit/newgraduate/recruit-info/dreampitch/",
   },
   {
     id: "lp-willtec-engineer",
